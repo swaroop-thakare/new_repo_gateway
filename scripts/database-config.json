@@ -1,0 +1,52 @@
+{
+  "databases": {
+    "postgres": {
+      "host": "vpc-infrastructure-postgres.c4xq00w00uyw.us-east-1.rds.amazonaws.com",
+      "port": 5432,
+      "database": "postgresdb",
+      "username": "postgres",
+      "password": "arealisgateway",
+      "url": "postgresql://postgres:arealisgateway@vpc-infrastructure-postgres.c4xq00w00uyw.us-east-1.rds.amazonaws.com:5432/postgresdb",
+      "ssl": true,
+      "pool": {
+        "min": 2,
+        "max": 10,
+        "idle": 10000
+      },
+      "timeout": 30000
+    },
+    "mysql": {
+      "host": "vpc-infrastructure-mysql.c4xq00w00uyw.us-east-1.rds.amazonaws.com",
+      "port": 3306,
+      "database": "mysqldb",
+      "username": "admin",
+      "password": "arealisgateway",
+      "url": "mysql://admin:arealisgateway@vpc-infrastructure-mysql.c4xq00w00uyw.us-east-1.rds.amazonaws.com:3306/mysqldb",
+      "ssl": true,
+      "pool": {
+        "min": 2,
+        "max": 10,
+        "idle": 10000
+      },
+      "timeout": 30000
+    }
+  },
+  "application": {
+    "environment": "production",
+    "log_level": "info",
+    "monitoring": {
+      "enabled": true,
+      "metrics_interval": 60000
+    }
+  },
+  "security": {
+    "encryption": true,
+    "ssl_required": true,
+    "connection_timeout": 30
+  },
+  "backup": {
+    "enabled": true,
+    "retention_days": 7,
+    "schedule": "0 3 * * *"
+  }
+}

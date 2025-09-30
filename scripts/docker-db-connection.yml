@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # PostgreSQL connection test container
+  postgres-client:
+    image: postgres:15-alpine
+    container_name: arealis-postgres-client
+    environment:
+      - PGPASSWORD=arealisgateway
+    command: >
+      sh -c "
+        echo 'Testing PostgreSQL connection...' &&
+        psql -h vpc-infrastructure-postgres.c4xq00w00uyw.us-east-1.rds.amazonaws.com 
+             -p 5432 
+             -U postgres 
+             -d postgresdb 
+             -c 'SELECT version();' &&
+        echo 'PostgreSQL connection successful!'
+      "
+    networks:
+      - arealis-network
+
+  # MySQL connection test container
+  mysql-client:
+    image: mysql:8.0
+    container_name: arealis-mysql-client
+    environment:
+      - MYSQL_PWD=arealisgateway
+    command: >
+      sh -c "
+        echo 'Testing MySQL connection...' &&
+        mysql -h vpc-infrastructure-mysql.c4xq00w00uyw.us-east-1.rds.amazonaws.com 
+              -P 3306 
+              -u admin 
+              -p$$MYSQL_PWD 
+              -e 'SELECT VERSION();' &&
+        echo 'MySQL connection successful!'
+      "
+    networks:
+      - arealis-network
+
+  # Application container with database connections
+  arealis-app:
+    image: python:3.11-slim
+    container_name: arealis-app
+    working_dir: /app
+    environment:
+      # PostgreSQL Configuration
+      - POSTGRES_HOST=vpc-infrastructure-postgres.c4xq00w00uyw.us-east-1.rds.amazonaws.com
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=postgresdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=arealisgateway
+      - POSTGRES_URL=postgresql://postgres:arealisgateway@vpc-infrastructure-postgres.c4xq00w00uyw.us-east-1.rds.amazonaws.com:5432/postgresdb
+      
+      # MySQL Configuration
+      - MYSQL_HOST=vpc-infrastructure-mysql.c4xq00w00uyw.us-east-1.rds.amazonaws.com
+      - MYSQL_PORT=3306
+      - MYSQL_DB=mysqldb
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=arealisgateway
+      - MYSQL_URL=mysql://admin:arealisgateway@vpc-infrastructure-mysql.c4xq00w00uyw.us-east-1.rds.amazonaws.com:3306/mysqldb
+      
+      # Application Configuration
+      - NODE_ENV=production
+      - LOG_LEVEL=info
+    volumes:
+      - ./db_connection.py:/app/db_connection.py
+    command: >
+      sh -c "
+        pip install psycopg2-binary pymysql &&
+        python db_connection.py
+      "
+    networks:
+      - arealis-network
+    depends_on:
+      - postgres-client
+      - mysql-client
+
+networks:
+  arealis-network:
+    driver: bridge
