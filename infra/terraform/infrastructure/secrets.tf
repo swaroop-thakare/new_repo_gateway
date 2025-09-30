@@ -17,7 +17,7 @@ resource "aws_kms_alias" "secrets" {
 
 # PostgreSQL Secret
 resource "aws_secretsmanager_secret" "postgres" {
-  name                    = "/${var.project_name}/rds/postgres"
+  name                    = "/${var.project_name}/rds/postgres-${formatdate("YYYYMMDD-hhmm", timestamp())}"
   description             = "PostgreSQL database credentials"
   kms_key_id              = aws_kms_key.secrets.arn
   recovery_window_in_days = 7
@@ -29,7 +29,7 @@ resource "aws_secretsmanager_secret" "postgres" {
 
 # MySQL Secret
 resource "aws_secretsmanager_secret" "mysql" {
-  name                    = "/${var.project_name}/rds/mysql"
+  name                    = "/${var.project_name}/rds/mysql-${formatdate("YYYYMMDD-hhmm", timestamp())}"
   description             = "MySQL database credentials"
   kms_key_id              = aws_kms_key.secrets.arn
   recovery_window_in_days = 7

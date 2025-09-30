@@ -127,6 +127,11 @@ terraform plan
 
 ### Apply
 ```bash
+# Apply the changes to disable deletion protection
+terraform apply -auto-approve
+
+# Then destroy everything
+terraform destroy -auto-approve
 terraform apply
 ```
 

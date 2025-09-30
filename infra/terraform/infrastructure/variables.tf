@@ -278,17 +278,37 @@ variable "maintenance_window" {
 variable "deletion_protection" {
   description = "Enable deletion protection for RDS instances"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "skip_final_snapshot" {
   description = "Skip final snapshot on deletion"
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "apply_immediately" {
   description = "Apply changes immediately"
   type        = bool
   default     = false
+}
+
+# Network Configuration
+variable "enable_sts_endpoint" {
+  description = "Enable STS VPC endpoint for authentication"
+  type        = bool
+  default     = false
+}
+
+variable "dns_servers" {
+  description = "Custom DNS servers to use"
+  type        = list(string)
+  default     = ["8.8.8.8", "8.8.4.4"]
+}
+
+# Force destroy configuration
+variable "force_destroy" {
+  description = "Force destroy resources even if they have dependencies"
+  type        = bool
+  default     = true
 }

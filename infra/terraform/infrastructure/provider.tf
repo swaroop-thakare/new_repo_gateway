@@ -27,6 +27,10 @@ terraform {
 provider "aws" {
   region = var.aws_region
 
+  # Add retry configuration for network issues
+  retry_mode = "adaptive"
+  max_retries = 3
+
   default_tags {
     tags = var.tags
   }
