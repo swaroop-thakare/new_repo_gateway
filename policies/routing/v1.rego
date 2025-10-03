@@ -31,6 +31,12 @@ allow := a if {
 
 allow := a if {
     payment_type := object.get(input.transaction, "payment_type", "")
+    payment_type == "payroll"
+    a := data.arealis.compliance.payroll.v1.allow
+}
+
+allow := a if {
+    payment_type := object.get(input.transaction, "payment_type", "")
     payment_type == "SALARY"
     a := data.arealis.compliance.payroll.v1.allow
 }
@@ -38,6 +44,12 @@ allow := a if {
 violations contains msg if {
     payment_type := object.get(input.transaction, "payment_type", "")
     payment_type == "PAYROLL"
+    msg := data.arealis.compliance.payroll.v1.violations[_]
+}
+
+violations contains msg if {
+    payment_type := object.get(input.transaction, "payment_type", "")
+    payment_type == "payroll"
     msg := data.arealis.compliance.payroll.v1.violations[_]
 }
 
@@ -66,6 +78,7 @@ violations contains msg if {
     payment_type := object.get(input.transaction, "payment_type", "")
     not payment_type == "LOAN_DISBURSEMENT"
     not payment_type == "PAYROLL"
+    not payment_type == "payroll"
     not payment_type == "SALARY"
     not payment_type == "VENDOR_PAYMENT"
     msg := sprintf("Unknown payment_type: %v", [payment_type])
