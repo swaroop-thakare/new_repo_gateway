@@ -131,7 +131,8 @@ terraform plan
 terraform apply -auto-approve
 
 # Then destroy everything
-terraform destroy -auto-approve
+terraform destroy -auto-ap|
+prove
 terraform apply
 ```
 
@@ -335,17 +336,19 @@ Database credentials are automatically stored in AWS Secrets Manager:
 **Get PostgreSQL credentials:**
 ```bash
 aws secretsmanager get-secret-value \
-  --secret-id /vpc-infrastructure/rds/postgres \
+  --secret-id /vpc-infrastructure/rds/postgres-20250930-1716 \
   --region us-east-1 \
   --query SecretString --output text | jq .
+
 ```
 
 **Get MySQL credentials:**
 ```bash
 aws secretsmanager get-secret-value \
-  --secret-id /vpc-infrastructure/rds/mysql \
+  --secret-id /vpc-infrastructure/rds/mysql-20250930-1716 \
   --region us-east-1 \
   --query SecretString --output text | jq .
+
 ```
 
 ### Using Terraform Outputs
@@ -469,6 +472,10 @@ terraform refresh
 
 This project is provided as-is for educational and development purposes. Please review and customize according to your organization's requirements.
 
+
+
+---
+#example:
 
 
 # psql command
