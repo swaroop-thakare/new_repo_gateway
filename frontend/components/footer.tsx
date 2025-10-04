@@ -11,7 +11,7 @@ export function Footer() {
               <div className="flex h-8 w-8 items-center justify-center rounded bg-white text-primary font-bold text-sm">
                 AG
               </div>
-              <span className="font-bold text-lg">Arealis Gateway</span>
+              <span className="font-bold text-lg">Arealis Magnus</span>
             </div>
             <p className="text-sm text-white/70">Global payroll and HR platform for modern businesses.</p>
           </div>
@@ -122,7 +122,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/70">© 2025 Arealis Gateway. All rights reserved.</p>
+          <p className="text-sm text-white/70">© 2025 Arealis Magnus. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-white/70 hover:text-white transition-colors">
               <Facebook className="h-5 w-5" />

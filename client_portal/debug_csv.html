@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Debug</title>
+</head>
+<body>
+    <h1>CSV Debug Tool</h1>
+    <input type="file" id="csvFile" accept=".csv" />
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('csvFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const csvText = e.target.result;
+                console.log('Raw CSV text:', csvText);
+                
+                const lines = csvText.split('\n').filter(line => line.trim());
+                console.log('Total lines:', lines.length);
+                console.log('Lines:', lines);
+                
+                document.getElementById('output').innerHTML = `
+                    <h3>Debug Results:</h3>
+                    <p><strong>Total lines:</strong> ${lines.length}</p>
+                    <p><strong>First line:</strong> ${lines[0]}</p>
+                    <p><strong>All lines:</strong></p>
+                    <pre>${lines.map((line, i) => `${i + 1}: ${line}`).join('\n')}</pre>
+                `;
+            };
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>

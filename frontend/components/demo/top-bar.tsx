@@ -22,7 +22,7 @@ export function TopBar() {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="gap-2 px-3 font-medium text-white hover:bg-white/5">
-              <span className="font-heading text-sm font-semibold">Arealis Gateway</span>
+              <span className="font-heading text-sm font-semibold">Arealis Magnus</span>
               <ChevronDown className="h-4 w-4 text-gray-400" />
             </Button>
           </DropdownMenuTrigger>
@@ -31,7 +31,7 @@ export function TopBar() {
               Switch Tenant
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-white/5" />
-            <DropdownMenuItem className="font-medium text-white hover:bg-white/5">Arealis Gateway</DropdownMenuItem>
+            <DropdownMenuItem className="font-medium text-white hover:bg-white/5">Arealis Magnus</DropdownMenuItem>
             <DropdownMenuItem className="text-gray-300 hover:bg-white/5">Arealis India</DropdownMenuItem>
             <DropdownMenuItem className="text-gray-300 hover:bg-white/5">Arealis Europe</DropdownMenuItem>
           </DropdownMenuContent>

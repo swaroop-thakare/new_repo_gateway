@@ -12,7 +12,7 @@ export function ComplianceSection() {
                 Compliance made easy
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Stay on top of changing payroll laws and tax compliance with Arealis Gateway products your IP, automates
+                Stay on top of changing payroll laws and tax compliance with Arealis Magnus products your IP, automates
                 tax updates, and helps you stay compliant everywhere you hire.
               </p>
             </div>

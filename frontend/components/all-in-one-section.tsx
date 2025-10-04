@@ -71,7 +71,7 @@ export function AllInOneSection() {
                   <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
                     AG
                   </div>
-                  <span className="font-semibold">Arealis Gateway</span>
+                  <span className="font-semibold">Arealis Magnus</span>
                 </div>
               </div>
 

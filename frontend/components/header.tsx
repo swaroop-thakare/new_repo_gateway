@@ -10,7 +10,7 @@ export function Header() {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-sm shadow-sm">
             AG
           </div>
-          <span className="font-heading text-xl font-semibold tracking-tight">Arealis Gateway</span>
+          <span className="font-heading text-xl font-semibold tracking-tight">Arealis Magnus</span>
         </Link>
 
         <div className="flex items-center gap-6">

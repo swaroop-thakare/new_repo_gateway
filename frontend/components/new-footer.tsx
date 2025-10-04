@@ -11,7 +11,7 @@ export function NewFooter() {
               <div className="flex h-8 w-8 items-center justify-center rounded text-primary-foreground font-bold text-sm bg-primary">
                 AG
               </div>
-              <span className="font-bold text-lg">Arealis Gateway</span>
+              <span className="font-bold text-lg">Arealis Magnus</span>
             </div>
             <p className="text-sm text-muted-foreground">Intelligent payout orchestration for modern finance teams.</p>
           </div>
@@ -76,7 +76,7 @@ export function NewFooter() {
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© 2025 Arealis Gateway. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© 2025 Arealis Magnus. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
               <Twitter className="h-5 w-5" />

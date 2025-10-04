@@ -14,7 +14,7 @@ export function FinalCTASection() {
             Redefine the Way Your Business Moves Money
           </h2>
           <p className="text-lg text-white/90 leading-relaxed">
-            From compliance to reconciliation, Arealis Gateway automates what slows you down. Stop managing financial
+            From compliance to reconciliation, Arealis Magnus automates what slows you down. Stop managing financial
             friction. Start scaling with intelligence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

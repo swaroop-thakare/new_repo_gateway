@@ -32,7 +32,7 @@ export function NewHeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-2xl text-pretty leading-relaxed">
-              Arealis Gateway is a non-custodial financial intelligence layer that sits on top of banking rails (NEFT,
+              Arealis Magnus is a non-custodial financial intelligence layer that sits on top of banking rails (NEFT,
               RTGS, IMPS, UPI, NACH). We don't hold your funds — instead, we power faster disbursements, autonomous
               compliance, and real-time reconciliation. Think of it as the brains for your financial flows.
             </p>

@@ -14,7 +14,7 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance text-white">
-              {"Arealis Gateway is a non-custodial financial intelligence layer"}
+              {"Arealis Magnus is a non-custodial financial intelligence layer"}
             </h1>
 
             <p className="text-lg text-white/90 max-w-xl text-pretty">

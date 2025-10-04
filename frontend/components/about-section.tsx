@@ -16,7 +16,7 @@ export function AboutSection() {
           <div className="relative space-y-12">
             <FadeIn className="text-center max-w-3xl mx-auto space-y-4">
               <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-2">
-                About Arealis Gateway
+                About Arealis Magnus
               </div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance">
                 Redefining Financial Infrastructure

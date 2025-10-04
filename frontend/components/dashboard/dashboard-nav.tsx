@@ -25,7 +25,7 @@ export function DashboardNav() {
             <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold text-sm">
               AG
             </div>
-            <span className="font-bold text-lg text-white">Arealis Gateway</span>
+            <span className="font-bold text-lg text-white">Arealis Magnus</span>
           </Link>
 
           {/* Center Navigation */}

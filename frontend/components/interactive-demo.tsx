@@ -16,7 +16,7 @@ export function InteractiveDemo() {
             <span className="text-sm font-medium text-primary">Interactive Demo</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">See Arealis Gateway in action</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">See Arealis Magnus in action</h2>
 
           <p className="text-lg text-muted-foreground text-balance">
             Experience our powerful payment operations platform with real-time metrics, intelligent routing, and
@@ -81,7 +81,7 @@ export function InteractiveDemo() {
           <div className="space-y-2">
             <p className="text-base text-foreground font-medium">Ready to transform your payment operations?</p>
             <p className="text-sm text-muted-foreground">
-              See how Arealis Gateway can streamline your workflows and boost efficiency
+              See how Arealis Magnus can streamline your workflows and boost efficiency
             </p>
           </div>
           <Button size="lg" className="gap-2 shadow-lg hover:shadow-xl transition-shadow">

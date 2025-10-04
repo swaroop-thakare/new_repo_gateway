@@ -16,7 +16,7 @@ export function SecuritySection() {
                 Maximum Security. <span className="text-primary">Zero Custodial Risk.</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Your funds never leave your bank accounts. Arealis Gateway is a non-custodial intelligence layer that
+                Your funds never leave your bank accounts. Arealis Magnus is a non-custodial intelligence layer that
                 integrates with your existing banks. We provide the decision-making brain for your payouts; your trusted
                 banking partners handle the money.
               </p>
@@ -76,7 +76,7 @@ export function SecuritySection() {
                       <Shield className="h-7 w-7 text-primary-foreground" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg">Arealis Gateway</p>
+                      <p className="font-bold text-lg">Arealis Magnus</p>
                       <p className="text-sm text-muted-foreground">Intelligence & orchestration layer</p>
                     </div>
                   </div>

@@ -20,7 +20,7 @@ const headingSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Arealis Gateway - Payment Operations Platform",
+  title: "Arealis Magnus - Payment Operations Platform",
   description:
     "Enterprise payment operations platform for modern finance teams. Manage approvals, investigations, and reconciliation with confidence.",
   generator: "v0.app",
