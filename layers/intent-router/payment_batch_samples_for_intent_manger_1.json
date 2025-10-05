@@ -1,0 +1,3102 @@
+[
+  {
+    "batch_id": "B-2025-10-21-99",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-21-385",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-1",
+        "amount": 874462,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402945****7807",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523816****284",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "INV05107183",
+        "remarks": "Material Supply Payment",
+        "transaction_timestamp": "2025-11-18T14:05:17Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-23",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-08-213",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-2",
+        "amount": 51666,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405312****9375",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526481****345",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV62323727",
+        "remarks": "Vendor Payment for Supplies",
+        "transaction_timestamp": "2025-10-21T11:14:13Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-11-02-32",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-11-02-233",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-3",
+        "amount": 304919,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408918****0106",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529535****945",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV02326266",
+        "remarks": "GST Tax Payment",
+        "transaction_timestamp": "2025-11-21T13:08:29Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-26-44",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-26-432",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-4",
+        "amount": 139529,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401645****8583",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522803****158",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID20159866",
+        "remarks": "Water Bill Payment",
+        "transaction_timestamp": "2025-11-02T16:47:33Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-16-87",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-16-703",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-5",
+        "amount": 189322,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401785****4220",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529607****907",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "REF63596954",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-31T14:32:07Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-61",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-09-391",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-6",
+        "amount": 231050,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402391****9849",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525608****711",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "REF55984557",
+        "remarks": "Utility Charges",
+        "transaction_timestamp": "2025-11-07T16:15:15Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-11-02-33",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-11-02-648",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-7",
+        "amount": 246620,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405730****4353",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524682****045",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "PAY92780134",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-11-02T17:19:06Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-18-63",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-18-399",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-8",
+        "amount": 655201,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403008****9794",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527921****614",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "SAKR00194842",
+        "remarks": "Personal Loan Payment",
+        "transaction_timestamp": "2025-10-28T15:13:19Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-11-01-05",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-11-01-819",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-9",
+        "amount": 406977,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406538****8884",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526375****167",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "REF70370290",
+        "remarks": "Material Supply Payment",
+        "transaction_timestamp": "2025-11-14T10:49:36Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-17-38",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-17-027",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-10",
+        "amount": 660973,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401319****7449",
+            "debitAccountHolderName": "R*** RIYA SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528514****839",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "TXID99310789",
+        "remarks": "Electricity Bill Payment",
+        "transaction_timestamp": "2025-11-13T14:00:51Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-19-25",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-19-007",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-11",
+        "amount": 102364,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407988****8243",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529686****557",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF58455696",
+        "remarks": "Monthly Compensation",
+        "transaction_timestamp": "2025-11-13T12:27:21Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-18",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-22-677",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-12",
+        "amount": 375462,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408162****1251",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526684****042",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "PAY47585589",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-11-17T15:22:35Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-31-45",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-31-597",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-13",
+        "amount": 977430,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402203****3164",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527467****988",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "GLO*** GLOBAL ELE*** ELECTRONICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID92875908",
+        "remarks": "Goods Procurement Payment",
+        "transaction_timestamp": "2025-11-02T16:57:28Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-31-80",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-31-273",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-14",
+        "amount": 710919,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407109****4468",
+            "debitAccountHolderName": "KRI*** KRISHNA TRA*** TRADERS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529807****039",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID25592828",
+        "remarks": "Electricity Bill Payment",
+        "transaction_timestamp": "2025-11-23T10:41:59Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-05",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-08-030",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-15",
+        "amount": 557628,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406163****1640",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524210****836",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "INV98261262",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-11-06T12:20:44Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-12-40",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-12-148",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-16",
+        "amount": 953979,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404618****0174",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524043****138",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF75160247",
+        "remarks": "Telecom Bill Payment",
+        "transaction_timestamp": "2025-11-01T17:43:55Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-05-75",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-05-971",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-17",
+        "amount": 634566,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409580****4345",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526893****511",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "GLO*** GLOBAL ELE*** ELECTRONICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID46631456",
+        "remarks": "Income Tax Deposit",
+        "transaction_timestamp": "2025-10-18T13:39:53Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-21-60",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-21-875",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-18",
+        "amount": 68568,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406611****6688",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524496****941",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID64151099",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-10-27T10:26:35Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-20-83",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-20-627",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-19",
+        "amount": 797618,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403964****8987",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521328****104",
+            "ifscCode": "KKBK0000678",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "REF37084691",
+        "remarks": "Water Bill Payment",
+        "transaction_timestamp": "2025-11-17T11:31:33Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-16-97",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-16-113",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-20",
+        "amount": 188074,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405272****8122",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523662****494",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "TXID94179508",
+        "remarks": "Income Tax Deposit",
+        "transaction_timestamp": "2025-10-25T16:13:01Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-03-16",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-03-651",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-21",
+        "amount": 419846,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409530****0020",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526158****489",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "PAY39442931",
+        "remarks": "Internet Services Payment",
+        "transaction_timestamp": "2025-10-25T11:38:02Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-74",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-08-882",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-22",
+        "amount": 482347,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405240****1958",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526434****391",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "REF61602548",
+        "remarks": "Professional Tax",
+        "transaction_timestamp": "2025-10-26T17:12:14Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-12-97",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-12-714",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-23",
+        "amount": 641975,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402516****9119",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522270****737",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "INV88044018",
+        "remarks": "Business Loan Transfer",
+        "transaction_timestamp": "2025-10-29T14:54:15Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-23-88",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-23-161",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-24",
+        "amount": 361635,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401047****9682",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524142****348",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR22668136",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-10-31T15:05:35Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-26-04",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-26-512",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-25",
+        "amount": 558322,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403246****6979",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526466****657",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "REF27981302",
+        "remarks": "Goods Procurement Payment",
+        "transaction_timestamp": "2025-11-09T11:46:51Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-44",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-09-388",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-26",
+        "amount": 699808,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403580****5059",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522640****427",
+            "ifscCode": "KKBK0000678",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "INV27125915",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-10-17T15:17:59Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-16-27",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-16-424",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-27",
+        "amount": 141484,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401283****4538",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521256****859",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "PAY83242283",
+        "remarks": "Telecom Bill Payment",
+        "transaction_timestamp": "2025-11-03T17:22:45Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-07-46",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-07-602",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-28",
+        "amount": 372992,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403988****4232",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524042****950",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR31547864",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-10-23T10:39:27Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-90",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-08-195",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-29",
+        "amount": 222388,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405796****0987",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524881****011",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV64033883",
+        "remarks": "Telecom Bill Payment",
+        "transaction_timestamp": "2025-11-03T10:58:34Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-20-05",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-20-915",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-30",
+        "amount": 99765,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402213****4287",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524384****504",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV63581154",
+        "remarks": "Employee Salary Payment",
+        "transaction_timestamp": "2025-10-23T11:31:53Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-06-52",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-06-315",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-31",
+        "amount": 949216,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402207****6812",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527634****404",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID65692288",
+        "remarks": "Monthly Salary Disbursement",
+        "transaction_timestamp": "2025-10-16T13:52:50Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-11-94",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-11-022",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-32",
+        "amount": 62206,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408857****3043",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524783****858",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID01560267",
+        "remarks": "Income Tax Deposit",
+        "transaction_timestamp": "2025-10-23T10:42:28Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-80",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-22-823",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-33",
+        "amount": 589502,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409974****7182",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522981****714",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "SAKR41810664",
+        "remarks": "Business Loan Transfer",
+        "transaction_timestamp": "2025-10-30T13:22:49Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-19-80",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-19-666",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-34",
+        "amount": 361235,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402176****8024",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521419****612",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "PAY93917245",
+        "remarks": "Monthly Salary Disbursement",
+        "transaction_timestamp": "2025-10-31T17:29:05Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-94",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-08-266",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-35",
+        "amount": 984550,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409342****7989",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529524****527",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV19755808",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-11-05T16:42:23Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-12-31",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-12-496",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-36",
+        "amount": 37705,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409321****6654",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521846****833",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "PAY38185220",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-25T17:45:54Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-29-36",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-29-601",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-37",
+        "amount": 168568,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408522****8441",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529609****913",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV16236925",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-11-26T12:02:03Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-65",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-09-916",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-38",
+        "amount": 602839,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402041****7361",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526567****513",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "INV52752054",
+        "remarks": "Material Supply Payment",
+        "transaction_timestamp": "2025-10-23T13:58:28Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-11-24",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-11-292",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-39",
+        "amount": 86026,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409339****5355",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528947****617",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "INV33113980",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-15T15:30:33Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-03-29",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-03-213",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-40",
+        "amount": 866890,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401098****3507",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525614****876",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "INV91172838",
+        "remarks": "Personal Loan Payment",
+        "transaction_timestamp": "2025-10-15T11:22:04Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-19-35",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-19-727",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-41",
+        "amount": 288733,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407886****7770",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521165****619",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "PAY20255884",
+        "remarks": "Electricity Bill Payment",
+        "transaction_timestamp": "2025-10-28T14:25:16Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-04-73",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-04-507",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-42",
+        "amount": 884119,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405661****2041",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525683****439",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "TXID81319085",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-11-02T15:58:39Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-10",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-22-587",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-43",
+        "amount": 128474,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402269****7024",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525480****259",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "REF60808513",
+        "remarks": "Internet Services Payment",
+        "transaction_timestamp": "2025-11-12T09:18:07Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-28-35",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-28-614",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-44",
+        "amount": 362685,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403819****0368",
+            "debitAccountHolderName": "KRI*** KRISHNA TRA*** TRADERS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527488****711",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "SAKR44933136",
+        "remarks": "Utility Charges",
+        "transaction_timestamp": "2025-11-13T09:44:23Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-11",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-09-860",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-45",
+        "amount": 267431,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402280****2826",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528141****231",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "SAKR02416202",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-10T15:16:33Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-16-29",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-16-771",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-46",
+        "amount": 957128,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403716****2634",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529430****436",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR25832599",
+        "remarks": "Goods Procurement Payment",
+        "transaction_timestamp": "2025-10-28T11:28:25Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-03-74",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-03-969",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-47",
+        "amount": 119227,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406003****4949",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524387****382",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "SAKR01745878",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-10-04T11:52:48Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-15",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-09-722",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-48",
+        "amount": 587619,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402759****4776",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524827****748",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "INV34549855",
+        "remarks": "Payment for Raw Materials",
+        "transaction_timestamp": "2025-10-13T17:20:25Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-04-39",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-04-107",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-49",
+        "amount": 445972,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408763****7945",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521046****076",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "PAY31277285",
+        "remarks": "Internet Services Payment",
+        "transaction_timestamp": "2025-10-30T09:46:10Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-11-86",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-11-742",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-50",
+        "amount": 201084,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407144****0818",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529654****371",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF29744608",
+        "remarks": "Professional Tax",
+        "transaction_timestamp": "2025-10-27T13:55:06Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-06-26",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-06-787",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-51",
+        "amount": 670486,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401075****0418",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521213****724",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "PAY51445024",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-25T12:34:34Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-07-30",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-07-261",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-52",
+        "amount": 336871,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402220****0905",
+            "debitAccountHolderName": "R*** RIYA SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528205****989",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "PAY83316578",
+        "remarks": "Personal Loan Payment",
+        "transaction_timestamp": "2025-10-23T16:14:10Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-18-66",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-18-952",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-53",
+        "amount": 417073,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403502****4807",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523615****092",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF08468100",
+        "remarks": "Business Loan Transfer",
+        "transaction_timestamp": "2025-11-12T09:45:37Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-21-46",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-21-065",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-54",
+        "amount": 34698,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403723****9359",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523505****278",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "INV57130828",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-11-12T11:24:34Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-16-84",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-16-696",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-55",
+        "amount": 761002,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405818****4333",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527816****721",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID45887282",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-11-03T14:22:01Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-18-62",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-18-864",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-56",
+        "amount": 893566,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402153****2081",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524716****361",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "REF68515863",
+        "remarks": "Professional Tax",
+        "transaction_timestamp": "2025-11-12T16:53:02Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-07-06",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-07-120",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-57",
+        "amount": 794965,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402458****4359",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525163****698",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID26900218",
+        "remarks": "Telecom Bill Payment",
+        "transaction_timestamp": "2025-10-18T09:55:11Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-18-39",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-18-872",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-58",
+        "amount": 594460,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407528****6253",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528216****550",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF71033351",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-21T12:06:58Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-29-10",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-29-659",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-59",
+        "amount": 451987,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407988****7956",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529805****657",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR25557858",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-11-14T11:10:43Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-87",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-08-336",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-60",
+        "amount": 137091,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408325****1889",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527516****549",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "PAY38454615",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-10-08T15:07:58Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-19-52",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-19-224",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-61",
+        "amount": 397411,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407017****2122",
+            "debitAccountHolderName": "KRI*** KRISHNA TRA*** TRADERS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529090****200",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "GLO*** GLOBAL ELE*** ELECTRONICS"
+          }
+        },
+        "sourceReferenceNumber": "TXID54913809",
+        "remarks": "Income Tax Deposit",
+        "transaction_timestamp": "2025-11-17T14:57:51Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-04-45",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-04-971",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-62",
+        "amount": 717376,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407002****4908",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523607****857",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "PAY62305086",
+        "remarks": "Electricity Bill Payment",
+        "transaction_timestamp": "2025-10-19T15:02:39Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-14-91",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-14-495",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-63",
+        "amount": 969471,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407286****2847",
+            "debitAccountHolderName": "R*** RIYA SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526760****613",
+            "ifscCode": "KKBK0000678",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "TXID18819388",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-10-23T16:16:14Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-19-53",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-19-887",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-64",
+        "amount": 446336,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404046****9527",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525153****937",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "INV97561628",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-11-04T16:13:58Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-15-62",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-15-242",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-65",
+        "amount": 414679,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403885****0563",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524484****373",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "INV73585159",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-10-21T12:03:14Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-13-30",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-13-129",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-66",
+        "amount": 73780,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401816****2804",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525997****283",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "REF27024642",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-10-30T12:08:19Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-28-34",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-28-937",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-67",
+        "amount": 755511,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406668****9072",
+            "debitAccountHolderName": "R*** RIYA SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526500****542",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "SAKR01945052",
+        "remarks": "Telecom Bill Payment",
+        "transaction_timestamp": "2025-11-20T17:29:23Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-29-90",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-29-539",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-68",
+        "amount": 699995,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401058****2239",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528813****349",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "SAKR80946826",
+        "remarks": "Loan Amount Disbursement",
+        "transaction_timestamp": "2025-10-30T11:01:56Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-25-02",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-25-067",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-69",
+        "amount": 498829,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406645****3771",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522117****054",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID49198933",
+        "remarks": "Monthly Compensation",
+        "transaction_timestamp": "2025-11-22T15:29:42Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-17-94",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-17-852",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-70",
+        "amount": 410250,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408137****1737",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528577****933",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "SAKR27577715",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-11-05T11:00:09Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-11-01-14",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-11-01-156",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-71",
+        "amount": 855768,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405938****3134",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522688****593",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "PAY82575008",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-11-12T09:51:12Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-57",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-22-369",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-72",
+        "amount": 763386,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405418****7049",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523957****668",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV03991723",
+        "remarks": "Goods Procurement Payment",
+        "transaction_timestamp": "2025-10-31T13:17:07Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-10-41",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-10-799",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-73",
+        "amount": 645718,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403918****6328",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529290****492",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "TXID84724877",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-10-23T15:10:39Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-25-23",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-25-215",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-74",
+        "amount": 510444,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404868****6813",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528292****705",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "TXID69523266",
+        "remarks": "Education Loan Disbursement",
+        "transaction_timestamp": "2025-10-31T09:56:54Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-29-17",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-29-101",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-75",
+        "amount": 84070,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404992****3847",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528389****201",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "TXID20647476",
+        "remarks": "GST Tax Payment",
+        "transaction_timestamp": "2025-11-01T15:41:47Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-11-01-41",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-11-01-798",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-76",
+        "amount": 688836,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405639****8810",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527802****329",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "SAKR88943116",
+        "remarks": "Education Loan Disbursement",
+        "transaction_timestamp": "2025-11-02T11:22:18Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-14",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-09-861",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-77",
+        "amount": 621110,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409883****9980",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526147****391",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "PAY72522681",
+        "remarks": "Corporate Tax Payment",
+        "transaction_timestamp": "2025-10-09T17:16:12Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-05-29",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-05-680",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-78",
+        "amount": 555234,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403566****6042",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523068****187",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "PRI*** PRIME CON*** CONSTRUCTION"
+          }
+        },
+        "sourceReferenceNumber": "PAY45320600",
+        "remarks": "Utility Charges",
+        "transaction_timestamp": "2025-11-02T14:33:44Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-18-55",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-18-406",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-79",
+        "amount": 101589,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405564****1250",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527033****960",
+            "ifscCode": "KKBK0000678",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR79501304",
+        "remarks": "Goods Procurement Payment",
+        "transaction_timestamp": "2025-11-07T09:36:57Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-12-09",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-12-591",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-80",
+        "amount": 792821,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406921****1347",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522271****877",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "TXID40541593",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-10-17T17:59:16Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-26-87",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-26-508",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-81",
+        "amount": 702282,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91409189****0848",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528859****661",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "PAY84716627",
+        "remarks": "Water Bill Payment",
+        "transaction_timestamp": "2025-11-13T15:42:15Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-21-20",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-21-904",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-82",
+        "amount": 862629,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406086****7400",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525846****850",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "GLO*** GLOBAL ELE*** ELECTRONICS"
+          }
+        },
+        "sourceReferenceNumber": "SAKR80334934",
+        "remarks": "Professional Tax",
+        "transaction_timestamp": "2025-11-08T15:55:57Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-13-28",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-13-905",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-83",
+        "amount": 688615,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403487****9109",
+            "debitAccountHolderName": "R*** RIYA SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524735****989",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV71620438",
+        "remarks": "Corporate Tax Payment",
+        "transaction_timestamp": "2025-11-09T12:26:30Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-20-11",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-20-467",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-84",
+        "amount": 163905,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403289****0541",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00524739****496",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF23720949",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-11-03T15:44:10Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-15-37",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-15-419",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-85",
+        "amount": 140869,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404190****6631",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00529222****897",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "TXID16608706",
+        "remarks": "Payment for Raw Materials",
+        "transaction_timestamp": "2025-10-25T14:09:10Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-24-26",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-24-206",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-86",
+        "amount": 773719,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408477****2586",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526283****845",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "N*** NEW ASH*** ASHOK IND*** INDUSTRIES"
+          }
+        },
+        "sourceReferenceNumber": "PAY17289584",
+        "remarks": "Professional Tax",
+        "transaction_timestamp": "2025-11-12T11:29:47Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-04-99",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-04-025",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-87",
+        "amount": 676805,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401407****8724",
+            "debitAccountHolderName": "BRA*** BRAHMA ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00521567****552",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "GLO*** GLOBAL ELE*** ELECTRONICS"
+          }
+        },
+        "sourceReferenceNumber": "PAY26554881",
+        "remarks": "Vendor Payment for Supplies",
+        "transaction_timestamp": "2025-10-22T14:33:38Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-13",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-22-937",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-88",
+        "amount": 532887,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91401390****0752",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525647****257",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "QUA*** QUALITY FAB*** FABRICS"
+          }
+        },
+        "sourceReferenceNumber": "SAKR77567280",
+        "remarks": "TDS Payment",
+        "transaction_timestamp": "2025-11-07T11:14:26Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-31-76",
+    "tenant_id": "SBI",
+    "invoice_ref": "INV-2025-10-31-065",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-89",
+        "amount": 474878,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406734****8281",
+            "debitAccountHolderName": "KRI*** KRISHNA TRA*** TRADERS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526991****877",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "ADV*** ADVANCE TEC*** TECHNOLOGIES"
+          }
+        },
+        "sourceReferenceNumber": "REF52673702",
+        "remarks": "Home Loan Amount",
+        "transaction_timestamp": "2025-11-19T15:48:08Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-09-78",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-09-713",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-90",
+        "amount": 148538,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402367****8832",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00527734****878",
+            "ifscCode": "BARB0RAEBAR",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "SAKR20976704",
+        "remarks": "Payroll Processing",
+        "transaction_timestamp": "2025-10-31T13:19:56Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-11-72",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-11-961",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-91",
+        "amount": 572863,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405847****7427",
+            "debitAccountHolderName": "SAR*** SARASWATI COR*** CORPORATION"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523407****177",
+            "ifscCode": "HDFC0000123",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "TXID54996705",
+        "remarks": "Water Bill Payment",
+        "transaction_timestamp": "2025-10-28T13:41:55Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-21-39",
+    "tenant_id": "AXIS",
+    "invoice_ref": "INV-2025-10-21-118",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-92",
+        "amount": 981430,
+        "currency": "INR",
+        "purpose": "LOAN_DISBURSEMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91405308****1812",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00522767****609",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "INV54862380",
+        "remarks": "Personal Loan Payment",
+        "transaction_timestamp": "2025-11-05T12:16:23Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-22-58",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-22-911",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-93",
+        "amount": 609775,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91406554****2119",
+            "debitAccountHolderName": "O*** OM ENT*** ENTERPRISES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525435****000",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "REF98176360",
+        "remarks": "Utility Charges",
+        "transaction_timestamp": "2025-11-10T16:18:35Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-21-35",
+    "tenant_id": "KOTAK",
+    "invoice_ref": "INV-2025-10-21-568",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-94",
+        "amount": 117326,
+        "currency": "INR",
+        "purpose": "TAX_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91403529****8296",
+            "debitAccountHolderName": "KRI*** KRISHNA TRA*** TRADERS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523341****323",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "PRE*** PREMIUM TEX*** TEXTILES"
+          }
+        },
+        "sourceReferenceNumber": "TXID69438234",
+        "remarks": "Corporate Tax Payment",
+        "transaction_timestamp": "2025-10-25T12:05:50Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-12-87",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-12-439",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-95",
+        "amount": 940634,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91407014****2598",
+            "debitAccountHolderName": "GAN*** GANESH MAN*** MANUFACTURING"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00526926****378",
+            "ifscCode": "CNRB0000912",
+            "creditAccountHolderName": "SUP*** SUPERIOR CHE*** CHEMICALS"
+          }
+        },
+        "sourceReferenceNumber": "REF40291747",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-11-05T16:22:53Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-07-88",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-07-012",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-96",
+        "amount": 249818,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402735****3647",
+            "debitAccountHolderName": "VIS*** VISHNU BUS*** BUSINESS"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523449****338",
+            "ifscCode": "ICIC0000456",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "SAKR21587849",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-11-06T14:18:51Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-05-21",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-05-953",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-97",
+        "amount": 946936,
+        "currency": "INR",
+        "purpose": "SALARY",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91402098****0886",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00523010****641",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "INV55952164",
+        "remarks": "Staff Salary Transfer",
+        "transaction_timestamp": "2025-10-13T16:53:12Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-06-12",
+    "tenant_id": "HDFC",
+    "invoice_ref": "INV-2025-10-06-092",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-98",
+        "amount": 499735,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404294****4594",
+            "debitAccountHolderName": "HAN*** HANUMAN IMP*** IMPEX"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525637****324",
+            "ifscCode": "SBIN0000789",
+            "creditAccountHolderName": "M*** MEGA STE*** STEEL COR*** CORPORATION"
+          }
+        },
+        "sourceReferenceNumber": "TXID64624417",
+        "remarks": "Vendor Payment for Supplies",
+        "transaction_timestamp": "2025-10-10T12:17:54Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-04-43",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-04-106",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-99",
+        "amount": 568788,
+        "currency": "INR",
+        "purpose": "UTILITY_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91404905****4091",
+            "debitAccountHolderName": "LAX*** LAXMI IND*** INDUSTRIES"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00525891****065",
+            "ifscCode": "UTIB0000345",
+            "creditAccountHolderName": "RAJ*** RAJENDRA PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "TXID61924214",
+        "remarks": "Water Bill Payment",
+        "transaction_timestamp": "2025-10-04T09:13:13Z"
+      }
+    ]
+  },
+  {
+    "batch_id": "B-2025-10-08-98",
+    "tenant_id": "ICICI",
+    "invoice_ref": "INV-2025-10-08-335",
+    "source": "BANK_INVOICE",
+    "policy_version": "intent-2.0.0",
+    "lines": [
+      {
+        "line_id": "L-100",
+        "amount": 80349,
+        "currency": "INR",
+        "purpose": "VENDOR_PAYMENT",
+        "DebitAccountDetails": {
+          "DebitAccountInformation": {
+            "debitAccountNumber": "91408462****6251",
+            "debitAccountHolderName": "SHY*** SHYAM TRA*** TRADING COM*** COMPANY"
+          }
+        },
+        "CreditAccountDetails": {
+          "CreditAccountInformation": {
+            "creditAccountNumber": "00528798****418",
+            "ifscCode": "INDB0000567",
+            "creditAccountHolderName": "SHR*** SHREE SID*** SIDDHI PLY*** PLYWOOD"
+          }
+        },
+        "sourceReferenceNumber": "TXID60445828",
+        "remarks": "Supplier Invoice Payment",
+        "transaction_timestamp": "2025-11-04T17:43:55Z"
+      }
+    ]
+  }
+]

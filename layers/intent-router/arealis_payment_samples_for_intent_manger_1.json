@@ -1,0 +1,3522 @@
+[
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN368085",
+    "sender": {
+      "name": "Mittal Ltd",
+      "account_number": "6937010567",
+      "ifsc_code": "KKBK0154893",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Ranbir Shanker",
+      "account_number": "1718345505",
+      "ifsc_code": "KKBK0488851",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 76395.17,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-19T07:32:32.357735",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.513942,
+        "longitude": 73.854724
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP2159",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN772273",
+    "sender": {
+      "name": "Mutti, Johal and Balakrishnan",
+      "account_number": "7400017624",
+      "ifsc_code": "SBIN0136822",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Indrajit Rai",
+      "account_number": "3451536326",
+      "ifsc_code": "SBIN0747188",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 131805.36,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-26T12:25:32.357854",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.517301,
+        "longitude": 73.864615
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP8001",
+      "department": "HR",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN855574",
+    "sender": {
+      "name": "Rajagopalan, Chopra and Verma",
+      "account_number": "4769367154",
+      "ifsc_code": "ICIC0203241",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Hemani Kalita",
+      "account_number": "5930534395",
+      "ifsc_code": "ICIC0625905",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 78259.23,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-21T11:03:32.357964",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.380778,
+        "longitude": 78.487899
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP9221",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN394022",
+    "sender": {
+      "name": "De-Singh",
+      "account_number": "9946721903",
+      "ifsc_code": "KKBK0922286",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Devansh Sunder",
+      "account_number": "3371977383",
+      "ifsc_code": "KKBK0308833",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 52897.46,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-06T00:07:32.358045",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.078412,
+        "longitude": 80.264271
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP8032",
+      "department": "HR",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN261156",
+    "sender": {
+      "name": "Thakur PLC",
+      "account_number": "2790745983",
+      "ifsc_code": "ICIC0113469",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Ekantika Gokhale",
+      "account_number": "8264847068",
+      "ifsc_code": "ICIC0277017",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 26367.76,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-11T14:10:32.358122",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.375286,
+        "longitude": 78.484611
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7976",
+      "department": "Operations",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN428237",
+    "sender": {
+      "name": "Mane-Sanghvi",
+      "account_number": "3416957263",
+      "ifsc_code": "KKBK0560550",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Tarak Tripathi",
+      "account_number": "7969047993",
+      "ifsc_code": "KKBK0357380",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 26031.94,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-15T15:20:32.358197",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.383656,
+        "longitude": 78.491647
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4075",
+      "department": "Operations",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN952556",
+    "sender": {
+      "name": "Comar, Buch and Hegde",
+      "account_number": "2342688895",
+      "ifsc_code": "UTIB0987478",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Ladli Gade",
+      "account_number": "6422669529",
+      "ifsc_code": "UTIB0346887",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 88347.1,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-22T01:19:32.358282",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.083137,
+        "longitude": 72.882237
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP5524",
+      "department": "Finance",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN731362",
+    "sender": {
+      "name": "Viswanathan-Bhargava",
+      "account_number": "7924595309",
+      "ifsc_code": "HDFC0695715",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Radhika Chaudhuri",
+      "account_number": "9212055506",
+      "ifsc_code": "HDFC0997177",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 51053.96,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-21T08:36:32.362496",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.382261,
+        "longitude": 78.480787
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7520",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN820982",
+    "sender": {
+      "name": "Krishnamurthy-Samra",
+      "account_number": "7722505076",
+      "ifsc_code": "UTIB0589674",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Aarav Borah",
+      "account_number": "5733850428",
+      "ifsc_code": "UTIB0160566",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 101286.8,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-05T03:13:32.362623",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.066088,
+        "longitude": 72.88571
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4465",
+      "department": "Finance",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN508879",
+    "sender": {
+      "name": "Nagarajan Inc",
+      "account_number": "3348289755",
+      "ifsc_code": "SBIN0400975",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Fariq Sagar",
+      "account_number": "8321367907",
+      "ifsc_code": "SBIN0300589",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 27550.06,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-09T08:02:32.362703",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.088786,
+        "longitude": 80.262458
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP1368",
+      "department": "Sales",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN986238",
+    "sender": {
+      "name": "Tara-Issac",
+      "account_number": "8916978974",
+      "ifsc_code": "UTIB0490261",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Sanaya Agrawal",
+      "account_number": "4514063917",
+      "ifsc_code": "UTIB0182707",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 21759.12,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-11-01T01:11:32.362776",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.525157,
+        "longitude": 73.862847
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4276",
+      "department": "Finance",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN995664",
+    "sender": {
+      "name": "Bhatt, Suresh and Gaba",
+      "account_number": "8770878598",
+      "ifsc_code": "HDFC0467948",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Sneha Narasimhan",
+      "account_number": "3951728253",
+      "ifsc_code": "HDFC0829545",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 86550.52,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-07T20:07:32.362857",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.963014,
+        "longitude": 77.59124
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP9034",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN453202",
+    "sender": {
+      "name": "Oak PLC",
+      "account_number": "9485001780",
+      "ifsc_code": "BARB0687039",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Samar Rau",
+      "account_number": "7944104232",
+      "ifsc_code": "BARB0473744",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 69600.66,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-03T22:25:32.362930",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.698222,
+        "longitude": 77.095941
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4838",
+      "department": "Finance",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN647957",
+    "sender": {
+      "name": "Sankar and Sons",
+      "account_number": "3757111187",
+      "ifsc_code": "SBIN0797023",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Veda Pillai",
+      "account_number": "6241692909",
+      "ifsc_code": "SBIN0208072",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 79084.8,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-26T14:19:32.362997",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.706597,
+        "longitude": 77.096022
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP5089",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN953578",
+    "sender": {
+      "name": "Karan PLC",
+      "account_number": "8147559848",
+      "ifsc_code": "PUNB0550044",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Ojas Mody",
+      "account_number": "1656026372",
+      "ifsc_code": "PUNB0692238",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 90821.84,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-27T12:55:32.363065",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.96173,
+        "longitude": 77.599145
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP6702",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN908642",
+    "sender": {
+      "name": "Pillai-Ghose",
+      "account_number": "7189310043",
+      "ifsc_code": "UTIB0944721",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Upma Talwar",
+      "account_number": "6705596177",
+      "ifsc_code": "UTIB0121405",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 132715.69,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-06T19:04:32.363134",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.569921,
+        "longitude": 88.372829
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP6223",
+      "department": "HR",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN236966",
+    "sender": {
+      "name": "Bava, Samra and Chhabra",
+      "account_number": "6481428413",
+      "ifsc_code": "ICIC0972808",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Charan Bedi",
+      "account_number": "8893272048",
+      "ifsc_code": "ICIC0150298",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 124365.11,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-20T11:35:32.363216",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.57741,
+        "longitude": 88.358576
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP8037",
+      "department": "Sales",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN904110",
+    "sender": {
+      "name": "Saha, Nagarajan and Butala",
+      "account_number": "7656899335",
+      "ifsc_code": "UTIB0259804",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Urvi Suresh",
+      "account_number": "7895780870",
+      "ifsc_code": "UTIB0326677",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 110249.64,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-06T01:22:32.363295",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.384528,
+        "longitude": 78.487327
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7026",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN238376",
+    "sender": {
+      "name": "Nagy, Parmer and Kalla",
+      "account_number": "5973553552",
+      "ifsc_code": "ICIC0414049",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Anjali Rajan",
+      "account_number": "1494947617",
+      "ifsc_code": "ICIC0757154",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 31182.77,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-18T11:04:32.363386",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.379328,
+        "longitude": 78.486715
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP3522",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN498408",
+    "sender": {
+      "name": "Gera Ltd",
+      "account_number": "3278368256",
+      "ifsc_code": "HDFC0707236",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Sathvik Sarkar",
+      "account_number": "6432968299",
+      "ifsc_code": "HDFC0688149",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 43318.23,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-18T17:33:32.363459",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.091285,
+        "longitude": 80.265759
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP2531",
+      "department": "Sales",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN909633",
+    "sender": {
+      "name": "Ben, Bahl and Badami",
+      "account_number": "4622789682",
+      "ifsc_code": "ICIC0248156",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Mugdha Doshi",
+      "account_number": "2630303725",
+      "ifsc_code": "ICIC0879120",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 121177.48,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-11-01T02:49:32.363545",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.069215,
+        "longitude": 72.873291
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP6147",
+      "department": "Sales",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN174988",
+    "sender": {
+      "name": "Sharaf-Dani",
+      "account_number": "8298509579",
+      "ifsc_code": "UTIB0313018",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Eiravati Natt",
+      "account_number": "1779814172",
+      "ifsc_code": "UTIB0202548",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 62292.96,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-31T23:19:32.363619",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.088585,
+        "longitude": 80.273714
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7488",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN801383",
+    "sender": {
+      "name": "Munshi-Kapur",
+      "account_number": "1935361488",
+      "ifsc_code": "PUNB0188857",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Ansh Pathak",
+      "account_number": "7432509618",
+      "ifsc_code": "PUNB0113463",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 37819.08,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-14T07:35:32.363690",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.966222,
+        "longitude": 77.586224
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP9026",
+      "department": "IT",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN558767",
+    "sender": {
+      "name": "Kumar Ltd",
+      "account_number": "4056177804",
+      "ifsc_code": "ICIC0181263",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Krishna Varughese",
+      "account_number": "6784724129",
+      "ifsc_code": "ICIC0677677",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 39242.49,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-11-01T09:52:32.363760",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.38944,
+        "longitude": 78.493261
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP5805",
+      "department": "Operations",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN864388",
+    "sender": {
+      "name": "Om and Sons",
+      "account_number": "3219660661",
+      "ifsc_code": "SBIN0256192",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Fiyaz Handa",
+      "account_number": "4795926525",
+      "ifsc_code": "SBIN0259900",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 48383.2,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-11T10:11:32.363825",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.51994,
+        "longitude": 73.855181
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP5117",
+      "department": "HR",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN680444",
+    "sender": {
+      "name": "Solanki, Sem and Halder",
+      "account_number": "7266093397",
+      "ifsc_code": "SBIN0444844",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Aayush Mangat",
+      "account_number": "4396472511",
+      "ifsc_code": "SBIN0393574",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 24621.15,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-05T04:32:32.363903",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.702398,
+        "longitude": 77.098314
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4215",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN406934",
+    "sender": {
+      "name": "Dube-Mallick",
+      "account_number": "3784132720",
+      "ifsc_code": "UTIB0260734",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Yatin Chauhan",
+      "account_number": "9591055311",
+      "ifsc_code": "UTIB0560993",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 109172.72,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-30T00:43:32.363977",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.713392,
+        "longitude": 77.098819
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP6028",
+      "department": "Sales",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN719121",
+    "sender": {
+      "name": "Konda-Dubey",
+      "account_number": "2260027672",
+      "ifsc_code": "UTIB0160988",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Krisha Bhatnagar",
+      "account_number": "4899974928",
+      "ifsc_code": "UTIB0116225",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 27308.39,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-27T07:37:32.364049",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.580189,
+        "longitude": 88.365442
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7679",
+      "department": "Finance",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN922316",
+    "sender": {
+      "name": "Thakkar PLC",
+      "account_number": "6261248506",
+      "ifsc_code": "SBIN0419113",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Yasti Sahni",
+      "account_number": "9530381728",
+      "ifsc_code": "SBIN0827072",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 49092.98,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-30T06:16:32.364165",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.079489,
+        "longitude": 72.880056
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP1548",
+      "department": "Sales",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN520326",
+    "sender": {
+      "name": "Gopal, Bhatia and Morar",
+      "account_number": "9055455911",
+      "ifsc_code": "HDFC0273203",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Saksham Choudhry",
+      "account_number": "6596242322",
+      "ifsc_code": "HDFC0527504",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 99549.44,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "EMP_WAGES",
+    "schedule_datetime": "2025-10-20T19:56:32.364248",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.518983,
+        "longitude": 73.851992
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP8306",
+      "department": "HR",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN598831",
+    "sender": {
+      "name": "Chandra-Edwin",
+      "account_number": "2071713911",
+      "ifsc_code": "BARB0978956",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Aryan Ramanathan",
+      "account_number": "4249823594",
+      "ifsc_code": "BARB0323959",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 102621.93,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-12T19:03:32.368388",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.69697,
+        "longitude": 77.107561
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP3279",
+      "department": "IT",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN130063",
+    "sender": {
+      "name": "Walla-Sachdeva",
+      "account_number": "2160562588",
+      "ifsc_code": "ICIC0271613",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Sneha Upadhyay",
+      "account_number": "3905071849",
+      "ifsc_code": "ICIC0236693",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 23023.98,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-05T15:53:32.368566",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.564928,
+        "longitude": 88.359216
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP7067",
+      "department": "Operations",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN736950",
+    "sender": {
+      "name": "Brar, Dhillon and Kapadia",
+      "account_number": "9714377643",
+      "ifsc_code": "HDFC0836951",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Rohan Singhal",
+      "account_number": "1290498648",
+      "ifsc_code": "HDFC0207107",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 54090.41,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-27T05:08:32.368657",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.379841,
+        "longitude": 78.478889
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP6520",
+      "department": "IT",
+      "payment_frequency": "Bi-weekly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN754562",
+    "sender": {
+      "name": "Arora-Rout",
+      "account_number": "5163735445",
+      "ifsc_code": "KKBK0529013",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Ayush Kaur",
+      "account_number": "3874121621",
+      "ifsc_code": "KKBK0485575",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 28795.39,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SALARY",
+    "schedule_datetime": "2025-10-22T20:09:32.368732",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.707332,
+        "longitude": 77.09937
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP4406",
+      "department": "Sales",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "payroll",
+    "transaction_id": "TXN158707",
+    "sender": {
+      "name": "Ramanathan-Bansal",
+      "account_number": "6212324537",
+      "ifsc_code": "UTIB0568271",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Lohit Agarwal",
+      "account_number": "9267137232",
+      "ifsc_code": "UTIB0497404",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 50486.94,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SAL",
+    "schedule_datetime": "2025-10-09T10:10:32.368804",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.072092,
+        "longitude": 72.870007
+      }
+    },
+    "additional_fields": {
+      "employee_id": "EMP8860",
+      "department": "Sales",
+      "payment_frequency": "Monthly"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN158183",
+    "sender": {
+      "name": "Vohra LLC",
+      "account_number": "5818683202",
+      "ifsc_code": "SBIN0879217",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Randhawa-Parmar",
+      "account_number": "8942982203",
+      "ifsc_code": "SBIN0974501",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 449780.65,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-25T18:48:32.368930",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.382793,
+        "longitude": 78.48496
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV90884",
+      "invoice_date": "2025-05-14",
+      "gst_number": "29ODWAY4061U29",
+      "pan_number": "FRTBG8720C",
+      "vendor_code": "VEND1976"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN630595",
+    "sender": {
+      "name": "Varma, Cherian and Parmar",
+      "account_number": "3285398380",
+      "ifsc_code": "KKBK0495111",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Doshi-Hayer",
+      "account_number": "1278257252",
+      "ifsc_code": "KKBK0177458",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 188364.43,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-30T02:22:32.369160",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.965681,
+        "longitude": 77.592065
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV95513",
+      "invoice_date": "2025-07-08",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND6714"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN576193",
+    "sender": {
+      "name": "Handa-Rao",
+      "account_number": "6167939625",
+      "ifsc_code": "HDFC0743676",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Mangal Group",
+      "account_number": "6579106852",
+      "ifsc_code": "HDFC0234920",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 134593.63,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-30T11:46:32.369293",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.074219,
+        "longitude": 80.275663
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV28551",
+      "invoice_date": "2025-05-15",
+      "gst_number": null,
+      "pan_number": "UTWCV6253C",
+      "vendor_code": "VEND3699"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN912519",
+    "sender": {
+      "name": "Magar Inc",
+      "account_number": "1539227247",
+      "ifsc_code": "BARB0353403",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Arora Inc",
+      "account_number": "5898031550",
+      "ifsc_code": "BARB0612883",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 475123.71,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-31T04:53:32.369449",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.077308,
+        "longitude": 72.885399
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV69022",
+      "invoice_date": "2025-09-01",
+      "gst_number": "08SALYJ3454E4K",
+      "pan_number": null,
+      "vendor_code": "VEND8048"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN716410",
+    "sender": {
+      "name": "Kalita-Deep",
+      "account_number": "2472813568",
+      "ifsc_code": "BARB0250547",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Talwar Group",
+      "account_number": "4368715908",
+      "ifsc_code": "BARB0142540",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 260643.44,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-03T15:51:32.369736",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.091101,
+        "longitude": 80.268386
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV72926",
+      "invoice_date": "2025-01-19",
+      "gst_number": null,
+      "pan_number": "RJOQG6088V",
+      "vendor_code": "VEND2976"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN352125",
+    "sender": {
+      "name": "Chaudhuri Inc",
+      "account_number": "2001532378",
+      "ifsc_code": "KKBK0561068",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Sachar Group",
+      "account_number": "2670610344",
+      "ifsc_code": "KKBK0684201",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 40519.28,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-11T05:23:32.369868",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.576648,
+        "longitude": 88.354003
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV89603",
+      "invoice_date": "2025-05-08",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND7288"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN573313",
+    "sender": {
+      "name": "Goel and Sons",
+      "account_number": "1469407566",
+      "ifsc_code": "UTIB0260431",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Peri and Sons",
+      "account_number": "1854396116",
+      "ifsc_code": "UTIB0186662",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 272801.81,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-25T01:55:32.369984",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.080326,
+        "longitude": 72.869969
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV14578",
+      "invoice_date": "2025-01-08",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND2958"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN158363",
+    "sender": {
+      "name": "Kota-Yadav",
+      "account_number": "2158914146",
+      "ifsc_code": "SBIN0908921",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Dube, Mander and Taneja",
+      "account_number": "8615529479",
+      "ifsc_code": "SBIN0327757",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 197487.27,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-24T18:11:32.370106",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.567471,
+        "longitude": 88.356968
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV30110",
+      "invoice_date": "2025-04-05",
+      "gst_number": "32LFMAC0275K4C",
+      "pan_number": "XMMAW0961T",
+      "vendor_code": "VEND4612"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN828701",
+    "sender": {
+      "name": "Borde-Mohanty",
+      "account_number": "8336587416",
+      "ifsc_code": "BARB0469704",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Agate-Dalal",
+      "account_number": "1175732123",
+      "ifsc_code": "BARB0872568",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 214322.29,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-29T15:53:32.370241",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.562794,
+        "longitude": 88.368735
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV78874",
+      "invoice_date": "2025-08-20",
+      "gst_number": null,
+      "pan_number": "LOIDE8042B",
+      "vendor_code": "VEND1937"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN711886",
+    "sender": {
+      "name": "Sekhon Ltd",
+      "account_number": "3933030215",
+      "ifsc_code": "UTIB0512852",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Soni, Yogi and Kata",
+      "account_number": "8036767408",
+      "ifsc_code": "UTIB0568694",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 461005.91,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-29T15:56:32.376106",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.968009,
+        "longitude": 77.586524
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV43718",
+      "invoice_date": "2025-05-02",
+      "gst_number": "01MUUHY9429T88",
+      "pan_number": null,
+      "vendor_code": "VEND2811"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN936740",
+    "sender": {
+      "name": "Gulati LLC",
+      "account_number": "2943644573",
+      "ifsc_code": "HDFC0708945",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Dewan, Agate and Mand",
+      "account_number": "8765847501",
+      "ifsc_code": "HDFC0585534",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 414250.49,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-16T20:56:32.376342",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.703507,
+        "longitude": 77.099007
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV79655",
+      "invoice_date": "2025-05-10",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND1536"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN128939",
+    "sender": {
+      "name": "Soman, Basak and Lata",
+      "account_number": "8327568866",
+      "ifsc_code": "KKBK0533550",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Palla LLC",
+      "account_number": "8687292412",
+      "ifsc_code": "KKBK0543934",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 387262.13,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-03T11:04:32.376494",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.702625,
+        "longitude": 77.098829
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV51278",
+      "invoice_date": "2025-08-13",
+      "gst_number": "07ELBMD3348T4V",
+      "pan_number": "IGYZP4767A",
+      "vendor_code": "VEND6678"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN289362",
+    "sender": {
+      "name": "Saini, Chacko and Bal",
+      "account_number": "9172773182",
+      "ifsc_code": "BARB0890542",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Bhasin, Dube and Joshi",
+      "account_number": "9017677645",
+      "ifsc_code": "BARB0226782",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 331746.1,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-28T04:49:32.376649",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.708574,
+        "longitude": 77.104723
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV98324",
+      "invoice_date": "2025-05-17",
+      "gst_number": "24ILNAL2734S6X",
+      "pan_number": null,
+      "vendor_code": "VEND2615"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN278755",
+    "sender": {
+      "name": "Tiwari, Gera and Dewan",
+      "account_number": "3917782659",
+      "ifsc_code": "BARB0414052",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Puri-Dash",
+      "account_number": "9643250271",
+      "ifsc_code": "BARB0472502",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 36206.06,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-23T08:47:32.376785",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.393703,
+        "longitude": 78.477533
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV60718",
+      "invoice_date": "2025-03-15",
+      "gst_number": "14SQASU0801B38",
+      "pan_number": null,
+      "vendor_code": "VEND9309"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN555092",
+    "sender": {
+      "name": "Narayanan-Kapur",
+      "account_number": "6790528673",
+      "ifsc_code": "UTIB0977663",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Bhatia-Desai",
+      "account_number": "2700475118",
+      "ifsc_code": "UTIB0713627",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 473604.88,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-28T03:27:32.376914",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.077634,
+        "longitude": 80.267409
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV86660",
+      "invoice_date": "2025-08-19",
+      "gst_number": "25SOFQR0383X6W",
+      "pan_number": null,
+      "vendor_code": "VEND8642"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN121165",
+    "sender": {
+      "name": "Sachar-Chaudhuri",
+      "account_number": "1625896394",
+      "ifsc_code": "HDFC0177298",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Saxena, De and Gade",
+      "account_number": "3079652042",
+      "ifsc_code": "HDFC0335572",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 222265.81,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-23T15:27:32.377048",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.710467,
+        "longitude": 77.109023
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV84802",
+      "invoice_date": "2025-03-11",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND2220"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN823743",
+    "sender": {
+      "name": "Chacko-Kuruvilla",
+      "account_number": "3318577380",
+      "ifsc_code": "KKBK0278120",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Ganesh LLC",
+      "account_number": "5602342863",
+      "ifsc_code": "KKBK0320010",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 7672.43,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-25T20:15:32.377161",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.567857,
+        "longitude": 88.358779
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV49177",
+      "invoice_date": "2025-08-07",
+      "gst_number": "14ZKVFE2930B7X",
+      "pan_number": "LYAQO7481Y",
+      "vendor_code": "VEND6203"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN124403",
+    "sender": {
+      "name": "Doshi, Wagle and Ray",
+      "account_number": "4381083900",
+      "ifsc_code": "BARB0885344",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Dayal Group",
+      "account_number": "8993849992",
+      "ifsc_code": "BARB0129171",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 229312.94,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-07T16:01:32.377312",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.980971,
+        "longitude": 77.595754
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV69844",
+      "invoice_date": "2025-02-18",
+      "gst_number": "21NSCUP6579H83",
+      "pan_number": "FJRUF7437R",
+      "vendor_code": "VEND8826"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN771341",
+    "sender": {
+      "name": "Shan, Dara and Chakraborty",
+      "account_number": "9153472130",
+      "ifsc_code": "PUNB0550301",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Sodhi LLC",
+      "account_number": "1834130171",
+      "ifsc_code": "PUNB0374639",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 349831.84,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-04T08:17:32.377456",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.523007,
+        "longitude": 73.850976
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV12962",
+      "invoice_date": "2025-02-25",
+      "gst_number": null,
+      "pan_number": "JEQEM6876B",
+      "vendor_code": "VEND5106"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN772007",
+    "sender": {
+      "name": "Sekhon-Viswanathan",
+      "account_number": "9172422488",
+      "ifsc_code": "HDFC0815034",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Chauhan Group",
+      "account_number": "2914162211",
+      "ifsc_code": "HDFC0900616",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 48744.25,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-16T12:25:32.377585",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.085643,
+        "longitude": 80.2639
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV16838",
+      "invoice_date": "2025-05-30",
+      "gst_number": null,
+      "pan_number": "JKSGX1470X",
+      "vendor_code": "VEND1306"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN453552",
+    "sender": {
+      "name": "Chatterjee PLC",
+      "account_number": "8341560311",
+      "ifsc_code": "ICIC0578332",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Chand-Narang",
+      "account_number": "8691430688",
+      "ifsc_code": "ICIC0454198",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 218885.42,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-17T04:34:32.377702",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.080777,
+        "longitude": 72.880132
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV99327",
+      "invoice_date": "2025-08-04",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND7805"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN628362",
+    "sender": {
+      "name": "Sibal Ltd",
+      "account_number": "2001940414",
+      "ifsc_code": "HDFC0522289",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Garde-Sunder",
+      "account_number": "4044421679",
+      "ifsc_code": "HDFC0979219",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 231306.32,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-12T08:36:32.377814",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.578694,
+        "longitude": 88.357176
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV16176",
+      "invoice_date": "2025-07-03",
+      "gst_number": "27IMLYR0532W80",
+      "pan_number": null,
+      "vendor_code": "VEND2390"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN785179",
+    "sender": {
+      "name": "Samra PLC",
+      "account_number": "7945674360",
+      "ifsc_code": "PUNB0650138",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Saxena, Choudhry and Madan",
+      "account_number": "6398169473",
+      "ifsc_code": "PUNB0312502",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 372679.99,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-20T04:09:32.377945",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.069387,
+        "longitude": 72.881713
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV41458",
+      "invoice_date": "2025-09-16",
+      "gst_number": null,
+      "pan_number": "DYUIF8759S",
+      "vendor_code": "VEND6413"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN377748",
+    "sender": {
+      "name": "Bajwa-Gokhale",
+      "account_number": "4698028182",
+      "ifsc_code": "HDFC0428617",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Rao, Sinha and Manda",
+      "account_number": "9037679228",
+      "ifsc_code": "HDFC0351708",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 221858.77,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "VENDOR",
+    "schedule_datetime": "2025-10-23T20:46:32.378071",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.972176,
+        "longitude": 77.596288
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV80500",
+      "invoice_date": "2025-08-31",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND3629"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN824338",
+    "sender": {
+      "name": "Nayak-Pandey",
+      "account_number": "2585973773",
+      "ifsc_code": "KKBK0490912",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Narang, Raju and Dayal",
+      "account_number": "7445197898",
+      "ifsc_code": "KKBK0827852",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 116201.09,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-10T00:26:32.378188",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.376003,
+        "longitude": 78.495272
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV88670",
+      "invoice_date": "2025-01-11",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND1566"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN885021",
+    "sender": {
+      "name": "Srinivas, Mohanty and Dora",
+      "account_number": "8262948967",
+      "ifsc_code": "HDFC0392032",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Bala Group",
+      "account_number": "3508972870",
+      "ifsc_code": "HDFC0465036",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 136118.4,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-06T12:23:32.380370",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.522717,
+        "longitude": 73.86399
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV66755",
+      "invoice_date": "2025-05-13",
+      "gst_number": "23KACIW3622A4D",
+      "pan_number": null,
+      "vendor_code": "VEND2824"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN351963",
+    "sender": {
+      "name": "Mand Ltd",
+      "account_number": "3125373228",
+      "ifsc_code": "HDFC0168721",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Memon Inc",
+      "account_number": "8530035362",
+      "ifsc_code": "HDFC0198227",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 205425.5,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-22T00:56:32.380617",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.711711,
+        "longitude": 77.096427
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV86709",
+      "invoice_date": "2025-09-26",
+      "gst_number": "35WDAPQ3419R64",
+      "pan_number": "SSBWY0166N",
+      "vendor_code": "VEND1423"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN417889",
+    "sender": {
+      "name": "Solanki LLC",
+      "account_number": "2254758169",
+      "ifsc_code": "PUNB0606620",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Kashyap, Taneja and Chhabra",
+      "account_number": "6003299151",
+      "ifsc_code": "PUNB0332134",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 30759.07,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-14T12:46:32.380772",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.978663,
+        "longitude": 77.595604
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV46914",
+      "invoice_date": "2025-06-03",
+      "gst_number": "33FLEWT9250X9V",
+      "pan_number": "VJKEB6083O",
+      "vendor_code": "VEND5243"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN186225",
+    "sender": {
+      "name": "Sachar Inc",
+      "account_number": "8356657390",
+      "ifsc_code": "BARB0264502",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Ahluwalia-Desai",
+      "account_number": "7387022518",
+      "ifsc_code": "BARB0565839",
+      "bank_name": "Bank of Baroda"
+    },
+    "amount": 177530.11,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-25T22:07:32.380911",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.519168,
+        "longitude": 73.846758
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV88172",
+      "invoice_date": "2025-05-09",
+      "gst_number": "04LFZHD4295W24",
+      "pan_number": null,
+      "vendor_code": "VEND2585"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN965769",
+    "sender": {
+      "name": "Goda, Rana and Sankaran",
+      "account_number": "2364599598",
+      "ifsc_code": "ICIC0643378",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Tripathi, Upadhyay and Bedi",
+      "account_number": "3150972005",
+      "ifsc_code": "ICIC0166325",
+      "bank_name": "ICICI Bank"
+    },
+    "amount": 461990.14,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-20T02:16:32.381053",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.083144,
+        "longitude": 80.270357
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV52923",
+      "invoice_date": "2025-08-07",
+      "gst_number": "22RWBLQ9105M8N",
+      "pan_number": null,
+      "vendor_code": "VEND5517"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN200055",
+    "sender": {
+      "name": "Krishna, Samra and Raju",
+      "account_number": "1653458584",
+      "ifsc_code": "HDFC0283634",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Tank-Prakash",
+      "account_number": "8322917796",
+      "ifsc_code": "HDFC0914349",
+      "bank_name": "HDFC Bank"
+    },
+    "amount": 289251.56,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "GOODS",
+    "schedule_datetime": "2025-10-30T14:30:32.381188",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.710453,
+        "longitude": 77.112227
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV35901",
+      "invoice_date": "2025-07-01",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND5674"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN948532",
+    "sender": {
+      "name": "Puri-Kunda",
+      "account_number": "4631247192",
+      "ifsc_code": "UTIB0115203",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Dugar, Badami and Devi",
+      "account_number": "7808121703",
+      "ifsc_code": "UTIB0950428",
+      "bank_name": "Axis Bank"
+    },
+    "amount": 259807.63,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-22T04:44:32.381330",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.566448,
+        "longitude": 88.362391
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV37304",
+      "invoice_date": "2025-09-01",
+      "gst_number": null,
+      "pan_number": "BBEMA0753A",
+      "vendor_code": "VEND1134"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN887746",
+    "sender": {
+      "name": "Jayaraman, Balan and Sama",
+      "account_number": "5487608548",
+      "ifsc_code": "SBIN0489298",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Nagarajan PLC",
+      "account_number": "7489281545",
+      "ifsc_code": "SBIN0660062",
+      "bank_name": "State Bank of India"
+    },
+    "amount": 276345.94,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-13T20:14:32.381464",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.704682,
+        "longitude": 77.107945
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV85092",
+      "invoice_date": "2025-09-04",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND9825"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN284909",
+    "sender": {
+      "name": "Sundaram-Buch",
+      "account_number": "2894871934",
+      "ifsc_code": "PUNB0964473",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Din-Madan",
+      "account_number": "7574203532",
+      "ifsc_code": "PUNB0563283",
+      "bank_name": "Punjab National Bank"
+    },
+    "amount": 118779.28,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SUP",
+    "schedule_datetime": "2025-10-06T05:49:32.381589",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.570953,
+        "longitude": 88.356765
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV32082",
+      "invoice_date": "2025-03-04",
+      "gst_number": "25PTBZM6085A5D",
+      "pan_number": null,
+      "vendor_code": "VEND8491"
+    }
+  },
+  {
+    "payment_type": "vendor_payment",
+    "transaction_id": "TXN228243",
+    "sender": {
+      "name": "Badami LLC",
+      "account_number": "6815160391",
+      "ifsc_code": "KKBK0150756",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Kala-Pandey",
+      "account_number": "8339936079",
+      "ifsc_code": "KKBK0594970",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "amount": 433417.84,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "SERVICES",
+    "schedule_datetime": "2025-10-25T00:40:32.381714",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.56326,
+        "longitude": 88.357671
+      }
+    },
+    "additional_fields": {
+      "invoice_number": "INV17765",
+      "invoice_date": "2025-05-02",
+      "gst_number": null,
+      "pan_number": null,
+      "vendor_code": "VEND1271"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN974456",
+    "sender": {
+      "name": "Prakash PLC Finance",
+      "account_number": "1474094944",
+      "ifsc_code": "PUNB0801721",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Zansi Thaker",
+      "account_number": "7763480100",
+      "ifsc_code": "PUNB0568126",
+      "bank_name": "Punjab National Bank",
+      "kyc_verified": false,
+      "credit_score": 872
+    },
+    "amount": 564516.75,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-11T02:41:32.381879",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.519305,
+        "longitude": 73.860779
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN71309",
+      "loan_type": "Personal",
+      "sanction_date": "2025-05-10",
+      "interest_rate": 14.23,
+      "tenure_months": 36,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN352582",
+    "sender": {
+      "name": "Date, Sankaran and Jain Finance",
+      "account_number": "4902395665",
+      "ifsc_code": "HDFC0461012",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Wazir Khanna",
+      "account_number": "7437291012",
+      "ifsc_code": "HDFC0522816",
+      "bank_name": "HDFC Bank",
+      "kyc_verified": false,
+      "credit_score": 537
+    },
+    "amount": 376712.14,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-22T01:27:32.382018",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.565525,
+        "longitude": 88.373392
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN71121",
+      "loan_type": "Home",
+      "sanction_date": "2025-06-06",
+      "interest_rate": 15.02,
+      "tenure_months": 24,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN702334",
+    "sender": {
+      "name": "Bahl PLC Finance",
+      "account_number": "7701490091",
+      "ifsc_code": "UTIB0122562",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Pahal Date",
+      "account_number": "4947651230",
+      "ifsc_code": "UTIB0992559",
+      "bank_name": "Axis Bank",
+      "kyc_verified": false,
+      "credit_score": 706
+    },
+    "amount": 707650.47,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-27T05:44:32.382138",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.575156,
+        "longitude": 88.35626
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN18035",
+      "loan_type": "Home",
+      "sanction_date": "2025-02-16",
+      "interest_rate": 12.19,
+      "tenure_months": 48,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN109162",
+    "sender": {
+      "name": "Sehgal-Biswas Finance",
+      "account_number": "5403598383",
+      "ifsc_code": "ICIC0443730",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Triya Mishra",
+      "account_number": "9864070017",
+      "ifsc_code": "ICIC0995620",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": true,
+      "credit_score": 631
+    },
+    "amount": 747794.3,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-17T12:22:32.382254",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.066614,
+        "longitude": 72.88563
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN80059",
+      "loan_type": "Business",
+      "sanction_date": "2025-09-12",
+      "interest_rate": 9.07,
+      "tenure_months": 24,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN713249",
+    "sender": {
+      "name": "Pingle, Aurora and Soman Finance",
+      "account_number": "4914977077",
+      "ifsc_code": "KKBK0536493",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Girik Venkatesh",
+      "account_number": "2228354672",
+      "ifsc_code": "KKBK0480572",
+      "bank_name": "Kotak Mahindra Bank",
+      "kyc_verified": false,
+      "credit_score": 552
+    },
+    "amount": 12318.88,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-16T16:42:32.386581",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.081695,
+        "longitude": 72.875612
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN29578",
+      "loan_type": "Business",
+      "sanction_date": "2025-06-18",
+      "interest_rate": 11.49,
+      "tenure_months": 24,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN303963",
+    "sender": {
+      "name": "Nazareth, Saha and Das Finance",
+      "account_number": "1592778344",
+      "ifsc_code": "HDFC0227969",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Umang Subramanian",
+      "account_number": "9993815948",
+      "ifsc_code": "HDFC0207854",
+      "bank_name": "HDFC Bank",
+      "kyc_verified": true,
+      "credit_score": 841
+    },
+    "amount": 189322.89,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-16T05:33:32.386748",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.375162,
+        "longitude": 78.493426
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN54943",
+      "loan_type": "Business",
+      "sanction_date": "2025-05-05",
+      "interest_rate": 10.74,
+      "tenure_months": 60,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN744309",
+    "sender": {
+      "name": "Vohra LLC Finance",
+      "account_number": "5095003357",
+      "ifsc_code": "HDFC0982526",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Logan Bhardwaj",
+      "account_number": "2293473688",
+      "ifsc_code": "HDFC0442034",
+      "bank_name": "HDFC Bank",
+      "kyc_verified": true,
+      "credit_score": 719
+    },
+    "amount": 113095.91,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-16T14:37:32.386876",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.074899,
+        "longitude": 72.879514
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN64771",
+      "loan_type": "Home",
+      "sanction_date": "2025-08-20",
+      "interest_rate": 12.59,
+      "tenure_months": 48,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN850798",
+    "sender": {
+      "name": "Chad, Bora and Srivastava Finance",
+      "account_number": "3725188149",
+      "ifsc_code": "SBIN0481579",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Yahvi Sahni",
+      "account_number": "5333403431",
+      "ifsc_code": "SBIN0116685",
+      "bank_name": "State Bank of India",
+      "kyc_verified": false,
+      "credit_score": 399
+    },
+    "amount": 935952.35,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-13T07:24:32.387003",
+    "location": {
+      "city": "Delhi",
+      "gps_coordinates": {
+        "latitude": 28.710414,
+        "longitude": 77.096236
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN79197",
+      "loan_type": "Business",
+      "sanction_date": "2025-07-13",
+      "interest_rate": 11.05,
+      "tenure_months": 36,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN891800",
+    "sender": {
+      "name": "Ramanathan Group Finance",
+      "account_number": "2203422387",
+      "ifsc_code": "ICIC0460193",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Yashica Apte",
+      "account_number": "1722224507",
+      "ifsc_code": "ICIC0491664",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": false,
+      "credit_score": 517
+    },
+    "amount": 518352.31,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-23T19:42:32.387123",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.080066,
+        "longitude": 72.877164
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN55565",
+      "loan_type": "Business",
+      "sanction_date": "2025-09-23",
+      "interest_rate": 15.1,
+      "tenure_months": 48,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN427697",
+    "sender": {
+      "name": "Mani Group Finance",
+      "account_number": "2550951253",
+      "ifsc_code": "ICIC0350208",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Kala Contractor",
+      "account_number": "1517069197",
+      "ifsc_code": "ICIC0628442",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": true,
+      "credit_score": 310
+    },
+    "amount": 763300.09,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-09T05:33:32.387243",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.573284,
+        "longitude": 88.359473
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN24020",
+      "loan_type": "Personal",
+      "sanction_date": "2025-09-27",
+      "interest_rate": 8.81,
+      "tenure_months": 12,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN960597",
+    "sender": {
+      "name": "Bora Group Finance",
+      "account_number": "7250739661",
+      "ifsc_code": "ICIC0812897",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Isha Patil",
+      "account_number": "6896156236",
+      "ifsc_code": "ICIC0310584",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": false,
+      "credit_score": 571
+    },
+    "amount": 778825.61,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-09T06:23:32.387378",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.385066,
+        "longitude": 78.481201
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN44573",
+      "loan_type": "Home",
+      "sanction_date": "2025-09-18",
+      "interest_rate": 12.97,
+      "tenure_months": 60,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN215856",
+    "sender": {
+      "name": "Contractor, Oommen and Ray Finance",
+      "account_number": "2189342170",
+      "ifsc_code": "KKBK0435994",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Hemang Srivastava",
+      "account_number": "7794112414",
+      "ifsc_code": "KKBK0932044",
+      "bank_name": "Kotak Mahindra Bank",
+      "kyc_verified": false,
+      "credit_score": 438
+    },
+    "amount": 280826.87,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-03T16:50:32.387511",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.970036,
+        "longitude": 77.59798
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN99750",
+      "loan_type": "Business",
+      "sanction_date": "2025-04-04",
+      "interest_rate": 9.03,
+      "tenure_months": 12,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN267497",
+    "sender": {
+      "name": "Edwin Inc Finance",
+      "account_number": "6192915085",
+      "ifsc_code": "HDFC0197560",
+      "bank_name": "HDFC Bank"
+    },
+    "receiver": {
+      "name": "Isha Agate",
+      "account_number": "8874742516",
+      "ifsc_code": "HDFC0961092",
+      "bank_name": "HDFC Bank",
+      "kyc_verified": true,
+      "credit_score": 522
+    },
+    "amount": 113963.31,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-28T09:19:32.387628",
+    "location": {
+      "city": "Kolkata",
+      "gps_coordinates": {
+        "latitude": 22.581447,
+        "longitude": 88.364417
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN11395",
+      "loan_type": "Business",
+      "sanction_date": "2025-02-07",
+      "interest_rate": 13.2,
+      "tenure_months": 12,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN593008",
+    "sender": {
+      "name": "Batra, Oommen and Menon Finance",
+      "account_number": "9316288511",
+      "ifsc_code": "UTIB0648073",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Harish Narasimhan",
+      "account_number": "1556014850",
+      "ifsc_code": "UTIB0951572",
+      "bank_name": "Axis Bank",
+      "kyc_verified": false,
+      "credit_score": 477
+    },
+    "amount": 780025.25,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-03T09:02:32.387751",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.081538,
+        "longitude": 80.266789
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN87034",
+      "loan_type": "Home",
+      "sanction_date": "2025-03-24",
+      "interest_rate": 15.09,
+      "tenure_months": 60,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN126547",
+    "sender": {
+      "name": "Mallick-Naidu Finance",
+      "account_number": "3735732188",
+      "ifsc_code": "ICIC0350625",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Praneel Upadhyay",
+      "account_number": "6023784825",
+      "ifsc_code": "ICIC0659125",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": true,
+      "credit_score": 638
+    },
+    "amount": 560415.12,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-04T14:05:32.387868",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.970183,
+        "longitude": 77.58534
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN60060",
+      "loan_type": "Home",
+      "sanction_date": "2025-02-07",
+      "interest_rate": 11.39,
+      "tenure_months": 12,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN318103",
+    "sender": {
+      "name": "Sule Ltd Finance",
+      "account_number": "2729885337",
+      "ifsc_code": "PUNB0459569",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Bimala Oza",
+      "account_number": "8463483177",
+      "ifsc_code": "PUNB0641040",
+      "bank_name": "Punjab National Bank",
+      "kyc_verified": false,
+      "credit_score": 367
+    },
+    "amount": 264624.29,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-25T14:08:32.387982",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.077336,
+        "longitude": 72.88724
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN97612",
+      "loan_type": "Personal",
+      "sanction_date": "2025-06-23",
+      "interest_rate": 11.89,
+      "tenure_months": 48,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN214862",
+    "sender": {
+      "name": "Handa Group Finance",
+      "account_number": "6355784993",
+      "ifsc_code": "SBIN0492393",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Anay Chad",
+      "account_number": "8923561849",
+      "ifsc_code": "SBIN0679987",
+      "bank_name": "State Bank of India",
+      "kyc_verified": true,
+      "credit_score": 719
+    },
+    "amount": 929279.04,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-08T07:14:32.388095",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.521027,
+        "longitude": 73.864964
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN21094",
+      "loan_type": "Home",
+      "sanction_date": "2025-03-28",
+      "interest_rate": 12.08,
+      "tenure_months": 12,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN156203",
+    "sender": {
+      "name": "Bansal Group Finance",
+      "account_number": "3508375737",
+      "ifsc_code": "KKBK0461489",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Logan Mohanty",
+      "account_number": "4220295107",
+      "ifsc_code": "KKBK0697758",
+      "bank_name": "Kotak Mahindra Bank",
+      "kyc_verified": true,
+      "credit_score": 306
+    },
+    "amount": 963297.89,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-12T21:32:32.388211",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.080893,
+        "longitude": 80.26109
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN82756",
+      "loan_type": "Home",
+      "sanction_date": "2025-03-02",
+      "interest_rate": 12.99,
+      "tenure_months": 24,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN534292",
+    "sender": {
+      "name": "Reddy Ltd Finance",
+      "account_number": "2558733764",
+      "ifsc_code": "PUNB0777616",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Dalaja Magar",
+      "account_number": "2539828595",
+      "ifsc_code": "PUNB0357644",
+      "bank_name": "Punjab National Bank",
+      "kyc_verified": false,
+      "credit_score": 705
+    },
+    "amount": 798118.12,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-13T16:42:32.396461",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.073117,
+        "longitude": 80.270667
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN98471",
+      "loan_type": "Personal",
+      "sanction_date": "2025-01-28",
+      "interest_rate": 10.7,
+      "tenure_months": 36,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN214457",
+    "sender": {
+      "name": "Sharaf-Vaidya Finance",
+      "account_number": "4544771836",
+      "ifsc_code": "BARB0367786",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Karan Sagar",
+      "account_number": "3422573916",
+      "ifsc_code": "BARB0350072",
+      "bank_name": "Bank of Baroda",
+      "kyc_verified": true,
+      "credit_score": 877
+    },
+    "amount": 961268.95,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-13T19:43:32.396676",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.072752,
+        "longitude": 72.885645
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN33581",
+      "loan_type": "Education",
+      "sanction_date": "2025-09-16",
+      "interest_rate": 12.73,
+      "tenure_months": 36,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN154678",
+    "sender": {
+      "name": "Sandal-Nadig Finance",
+      "account_number": "8410968229",
+      "ifsc_code": "SBIN0973490",
+      "bank_name": "State Bank of India"
+    },
+    "receiver": {
+      "name": "Bakhshi Comar",
+      "account_number": "2938228661",
+      "ifsc_code": "SBIN0437553",
+      "bank_name": "State Bank of India",
+      "kyc_verified": false,
+      "credit_score": 459
+    },
+    "amount": 181481.82,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-30T11:43:32.396801",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.975255,
+        "longitude": 77.595083
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN51190",
+      "loan_type": "Personal",
+      "sanction_date": "2025-06-09",
+      "interest_rate": 10.51,
+      "tenure_months": 36,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN700240",
+    "sender": {
+      "name": "Vora-Divan Finance",
+      "account_number": "5330665479",
+      "ifsc_code": "ICIC0303011",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Jhalak Bakshi",
+      "account_number": "6820685228",
+      "ifsc_code": "ICIC0414511",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": false,
+      "credit_score": 767
+    },
+    "amount": 655493.28,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-24T20:36:32.396920",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.071458,
+        "longitude": 72.876698
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN33265",
+      "loan_type": "Personal",
+      "sanction_date": "2025-07-11",
+      "interest_rate": 13.73,
+      "tenure_months": 36,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN988219",
+    "sender": {
+      "name": "Shetty, Kade and Gole Finance",
+      "account_number": "5704703312",
+      "ifsc_code": "PUNB0586855",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Brinda Goyal",
+      "account_number": "7320574946",
+      "ifsc_code": "PUNB0298499",
+      "bank_name": "Punjab National Bank",
+      "kyc_verified": true,
+      "credit_score": 474
+    },
+    "amount": 431087.41,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-21T16:08:32.397042",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.971569,
+        "longitude": 77.597771
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN12380",
+      "loan_type": "Home",
+      "sanction_date": "2025-01-09",
+      "interest_rate": 9.77,
+      "tenure_months": 48,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN303176",
+    "sender": {
+      "name": "Gill Group Finance",
+      "account_number": "3649351317",
+      "ifsc_code": "ICIC0475423",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Pallavi Dada",
+      "account_number": "8720498267",
+      "ifsc_code": "ICIC0539443",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": true,
+      "credit_score": 783
+    },
+    "amount": 322333.79,
+    "currency": "INR",
+    "method": "UPI",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-08T12:18:32.397158",
+    "location": {
+      "city": "Pune",
+      "gps_coordinates": {
+        "latitude": 18.530345,
+        "longitude": 73.863407
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN92978",
+      "loan_type": "Personal",
+      "sanction_date": "2025-06-20",
+      "interest_rate": 12.3,
+      "tenure_months": 24,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN200984",
+    "sender": {
+      "name": "Buch, Ramachandran and Swamy Finance",
+      "account_number": "2420247849",
+      "ifsc_code": "BARB0833617",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Harinakshi Sarma",
+      "account_number": "8714552491",
+      "ifsc_code": "BARB0515830",
+      "bank_name": "Bank of Baroda",
+      "kyc_verified": true,
+      "credit_score": 844
+    },
+    "amount": 978216.26,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-03T00:08:32.397278",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.077835,
+        "longitude": 72.880461
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN55951",
+      "loan_type": "Business",
+      "sanction_date": "2025-01-08",
+      "interest_rate": 12.97,
+      "tenure_months": 24,
+      "borrower_verification_status": "Verified"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN266246",
+    "sender": {
+      "name": "Jha PLC Finance",
+      "account_number": "6773888712",
+      "ifsc_code": "UTIB0451217",
+      "bank_name": "Axis Bank"
+    },
+    "receiver": {
+      "name": "Lakshmi Jha",
+      "account_number": "8088848311",
+      "ifsc_code": "UTIB0257761",
+      "bank_name": "Axis Bank",
+      "kyc_verified": false,
+      "credit_score": 624
+    },
+    "amount": 182427.08,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-13T11:03:32.399330",
+    "location": {
+      "city": "Hyderabad",
+      "gps_coordinates": {
+        "latitude": 17.39204,
+        "longitude": 78.482119
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN92519",
+      "loan_type": "Home",
+      "sanction_date": "2025-01-19",
+      "interest_rate": 13.48,
+      "tenure_months": 36,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN211713",
+    "sender": {
+      "name": "Varughese Group Finance",
+      "account_number": "4124297753",
+      "ifsc_code": "PUNB0872898",
+      "bank_name": "Punjab National Bank"
+    },
+    "receiver": {
+      "name": "Krishna Natt",
+      "account_number": "4215371624",
+      "ifsc_code": "PUNB0969226",
+      "bank_name": "Punjab National Bank",
+      "kyc_verified": false,
+      "credit_score": 492
+    },
+    "amount": 139966.98,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "LOAN_DISB",
+    "schedule_datetime": "2025-10-17T04:13:32.399583",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.082343,
+        "longitude": 80.278012
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN15237",
+      "loan_type": "Personal",
+      "sanction_date": "2025-06-05",
+      "interest_rate": 10.82,
+      "tenure_months": 36,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN247838",
+    "sender": {
+      "name": "Pingle, Dayal and Thakkar Finance",
+      "account_number": "3586693603",
+      "ifsc_code": "KKBK0927362",
+      "bank_name": "Kotak Mahindra Bank"
+    },
+    "receiver": {
+      "name": "Vihaan Swaminathan",
+      "account_number": "3693689630",
+      "ifsc_code": "KKBK0686929",
+      "bank_name": "Kotak Mahindra Bank",
+      "kyc_verified": true,
+      "credit_score": 712
+    },
+    "amount": 162370.58,
+    "currency": "INR",
+    "method": "IMPS",
+    "purpose": "LOAN",
+    "schedule_datetime": "2025-10-26T19:05:32.399723",
+    "location": {
+      "city": "Chennai",
+      "gps_coordinates": {
+        "latitude": 13.081848,
+        "longitude": 80.278328
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN71920",
+      "loan_type": "Education",
+      "sanction_date": "2025-05-04",
+      "interest_rate": 14.73,
+      "tenure_months": 60,
+      "borrower_verification_status": "Pending"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN435580",
+    "sender": {
+      "name": "Wason and Sons Finance",
+      "account_number": "4228781504",
+      "ifsc_code": "ICIC0516031",
+      "bank_name": "ICICI Bank"
+    },
+    "receiver": {
+      "name": "Oliver Ratta",
+      "account_number": "6033121135",
+      "ifsc_code": "ICIC0449199",
+      "bank_name": "ICICI Bank",
+      "kyc_verified": true,
+      "credit_score": 734
+    },
+    "amount": 375025.29,
+    "currency": "INR",
+    "method": "RTGS",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-23T12:17:32.399847",
+    "location": {
+      "city": "Mumbai",
+      "gps_coordinates": {
+        "latitude": 19.07667,
+        "longitude": 72.886489
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN48797",
+      "loan_type": "Home",
+      "sanction_date": "2025-07-28",
+      "interest_rate": 12.42,
+      "tenure_months": 48,
+      "borrower_verification_status": "Rejected"
+    }
+  },
+  {
+    "payment_type": "loan_disbursement",
+    "transaction_id": "TXN300173",
+    "sender": {
+      "name": "Kalita-Kala Finance",
+      "account_number": "6096194457",
+      "ifsc_code": "BARB0954874",
+      "bank_name": "Bank of Baroda"
+    },
+    "receiver": {
+      "name": "Kashvi Dixit",
+      "account_number": "4431064868",
+      "ifsc_code": "BARB0594934",
+      "bank_name": "Bank of Baroda",
+      "kyc_verified": true,
+      "credit_score": 635
+    },
+    "amount": 373015.49,
+    "currency": "INR",
+    "method": "NEFT",
+    "purpose": "ADVANCE",
+    "schedule_datetime": "2025-10-22T10:39:32.399969",
+    "location": {
+      "city": "Bangalore",
+      "gps_coordinates": {
+        "latitude": 12.967316,
+        "longitude": 77.593954
+      }
+    },
+    "additional_fields": {
+      "loan_account_number": "LOAN69616",
+      "loan_type": "Business",
+      "sanction_date": "2025-01-01",
+      "interest_rate": 8.74,
+      "tenure_months": 12,
+      "borrower_verification_status": "Rejected"
+    }
+  }
+]

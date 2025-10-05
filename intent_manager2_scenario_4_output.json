@@ -1,0 +1,26 @@
+{
+  "batch_id": "B-2025-10-03-04",
+  "intents": [
+    {
+      "line_id": "L-4",
+      "intent": "VENDOR_PAYMENTS",
+      "risk_score": 0.35,
+      "confidence": 0.94,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "reference_number": "SAKR39267671",
+        "timestamp": "2025-10-05T00:56:49.031521"
+      },
+      "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-05-01/L-4/intent.json",
+      "decision": "OVERRIDE"
+    }
+  ],
+  "workflow_id": "WF-VENDOR-OVERRIDE",
+  "agent_pipeline": [
+    "CRRAK",
+    "PDR",
+    "ARL"
+  ],
+  "policy_version": "intent-2.0.0"
+}

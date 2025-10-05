@@ -1,0 +1,117 @@
+{
+  "batch_id": "B-CONSOLIDATED-20251003-223346",
+  "scenarios": [
+    {
+      "batch_id": "B-2025-10-03-01",
+      "intents": [
+        {
+          "line_id": "L-1",
+          "intent": "VENDOR_PAYMENTS",
+          "risk_score": 0.45,
+          "confidence": 0.94,
+          "axis_validation": {
+            "code": "00",
+            "result": "Success",
+            "reference_number": "SAKR39267668",
+            "timestamp": "2025-10-03T22:33:46.616774"
+          },
+          "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-03-01/L-1/intent.json",
+          "decision": "HOLD"
+        }
+      ],
+      "workflow_id": "WF-VENDOR-HOLD",
+      "agent_pipeline": [
+        "PDR",
+        "ACC",
+        "ARL"
+      ],
+      "policy_version": "intent-2.0.0"
+    },
+    {
+      "batch_id": "B-2025-10-03-02",
+      "intents": [
+        {
+          "line_id": "L-2",
+          "intent": "PAYROLL",
+          "risk_score": 0.25,
+          "confidence": 0.94,
+          "axis_validation": {
+            "code": "00",
+            "result": "Success",
+            "reference_number": "SAKR39267669",
+            "timestamp": "2025-10-03T22:33:46.617048"
+          },
+          "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-03-01/L-2/intent.json",
+          "decision": "PASS"
+        }
+      ],
+      "workflow_id": "WF-PAYROLL-DOMESTIC",
+      "agent_pipeline": [
+        "ACC",
+        "ARL",
+        "PDR",
+        "CRRAK",
+        "Execution"
+      ],
+      "policy_version": "intent-2.0.0"
+    },
+    {
+      "batch_id": "B-2025-10-03-03",
+      "intents": [
+        {
+          "line_id": "L-3",
+          "intent": "LOAN",
+          "risk_score": 0.48,
+          "confidence": 0.83,
+          "axis_validation": {
+            "code": "00",
+            "result": "Success",
+            "reference_number": "SAKR39267670",
+            "timestamp": "2025-10-03T22:33:46.617202"
+          },
+          "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-03-01/L-3/intent.json",
+          "decision": "FAIL"
+        }
+      ],
+      "workflow_id": "WF-LOAN-FAIL",
+      "agent_pipeline": [
+        "CRRAK",
+        "ACC",
+        "ARL"
+      ],
+      "policy_version": "intent-2.0.0"
+    },
+    {
+      "batch_id": "B-2025-10-03-04",
+      "intents": [
+        {
+          "line_id": "L-4",
+          "intent": "VENDOR_PAYMENTS",
+          "risk_score": 0.35,
+          "confidence": 0.94,
+          "axis_validation": {
+            "code": "00",
+            "result": "Success",
+            "reference_number": "SAKR39267671",
+            "timestamp": "2025-10-03T22:33:46.617334"
+          },
+          "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-03-01/L-4/intent.json",
+          "decision": "OVERRIDE"
+        }
+      ],
+      "workflow_id": "WF-VENDOR-OVERRIDE",
+      "agent_pipeline": [
+        "ACC",
+        "ARL",
+        "PDR",
+        "CRRAK",
+        "Execution"
+      ],
+      "policy_version": "intent-2.0.0"
+    }
+  ],
+  "total_scenarios": 4,
+  "policy_version": "intent-2.0.0",
+  "timestamp": "2025-10-03T22:33:46.617459Z",
+  "status": "PROCESSING"
+}

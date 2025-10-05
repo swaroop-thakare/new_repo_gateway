@@ -1,0 +1,26 @@
+{
+  "batch_id": "B-2025-10-03-01",
+  "intents": [
+    {
+      "line_id": "L-1",
+      "intent": "VENDOR_PAYMENTS",
+      "risk_score": 0.45,
+      "confidence": 0.94,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "reference_number": "SAKR39267668",
+        "timestamp": "2025-10-05T00:56:49.030918"
+      },
+      "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-05-01/L-1/intent.json",
+      "decision": "HOLD"
+    }
+  ],
+  "workflow_id": "WF-VENDOR-HOLD",
+  "agent_pipeline": [
+    "CRRAK",
+    "RCA",
+    "PDR"
+  ],
+  "policy_version": "intent-2.0.0"
+}

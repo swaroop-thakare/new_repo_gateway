@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "generatedAt": "2025-10-03T17:19:04.247363",
+    "startDate": "2024-10-01T00:00:00",
+    "endDate": "2024-10-30T00:00:00",
+    "totalDays": 30,
+    "totalTransactions": 8,
+    "averageTransactionsPerDay": 0.27,
+    "transactionTypes": {
+      "IMPS": 1,
+      "NEFT": 3,
+      "RTGS": 2,
+      "IFT": 2
+    },
+    "successRate": 100.0,
+    "totalVolume": 50000000
+  },
+  "transactions": [
+    {
+      "transactionId": "TXN20241001000001",
+      "requestUUID": "111b3f60-c34a-43f0-8f28-e9b6a68e76ae",
+      "sourceReferenceNumber": "SRN119549372",
+      "transactionType": "IFT",
+      "timestamp": "2024-10-01T16:34:36",
+      "transactionDate": "01102024163436",
+      "amount": 922288,
+      "currency": "INR",
+      "channelId": "BRANCH",
+      "txnInitChannel": "API",
+      "remitter": {
+        "accountNumber": "62908824712",
+        "accountHolderName": "Zashil Rajan",
+        "mobileNumber": "919886328298",
+        "email": "asur@example.org",
+        "bankName": "Bank of India",
+        "ifscCode": "BKID0909973"
+      },
+      "beneficiary": {
+        "accountNumber": "939070055817085",
+        "accountHolderName": "Yagnesh Murthy",
+        "bankName": "Union Bank of India",
+        "ifscCode": "UBIN0806977",
+        "mobileNumber": null,
+        "email": null
+      },
+      "response": {
+        "responseCode": "00",
+        "isSuccess": true,
+        "message": "The Transaction is Successfully Completed",
+        "utrNumber": "IFT20241001822314",
+        "retrievalReferenceNo": "723721653729"
+      },
+      "additionalDetails": {
+        "remarks": "Eveniet magni eos in in doloremque.",
+        "narration": "Labore esse unde debitis laborum.",
+        "serviceRequestId": "NB.GEN.SVC.ENQ",
+        "serviceRequestVersion": "1.0",
+        "checksum": "4704801997"
+      },
+      "processingTimeMs": 1619
+    },
+    {
+      "transactionId": "TXN20241001000002",
+      "requestUUID": "af83926f-b6c1-4dc6-a93b-4dc1a7924cfe",
+      "sourceReferenceNumber": "SRN132651284",
+      "transactionType": "NEFT",
+      "timestamp": "2024-10-01T10:31:17",
+      "transactionDate": "01102024103117",
+      "amount": 9961127,
+      "currency": "INR",
+      "channelId": "BRANCH",
+      "txnInitChannel": "INET",
+      "remitter": {
+        "accountNumber": "62561047535",
+        "accountHolderName": "Irya Ganesan",
+        "mobileNumber": "919548494335",
+        "email": "deviwishi@example.org",
+        "bankName": "ICICI Bank",
+        "ifscCode": "ICIC0162932"
+      },
+      "beneficiary": {
+        "accountNumber": "8914840121",
+        "accountHolderName": "Yashoda Mammen",
+        "bankName": "Bank of Baroda",
+        "ifscCode": "BARB0393781",
+        "mobileNumber": "919739746033",
+        "email": null
+      },
+      "response": {
+        "responseCode": "1",
+        "isSuccess": true,
+        "message": "Transaction Processed Successfully",
+        "utrNumber": "24-275****494651-1",
+        "retrievalReferenceNo": "716478192402"
+      },
+      "additionalDetails": {
+        "remarks": "Aut libero assumenda quia.",
+        "narration": "Omnis fuga quia quidem corrupti at inventore laudantium totam voluptate.",
+        "serviceRequestId": "NB.TXN.API.ELIG",
+        "serviceRequestVersion": "1.0",
+        "checksum": "2966400912"
+      },
+      "processingTimeMs": 3850
+    },
+    {
+      "transactionId": "TXN20241001000007",
+      "requestUUID": "ff0812bd-fde3-408f-8bba-d9484937c70e",
+      "sourceReferenceNumber": "SRN409439708",
+      "transactionType": "IMPS",
+      "timestamp": "2024-10-01T09:12:15",
+      "transactionDate": "01102024091215",
+      "amount": 23068,
+      "currency": "INR",
+      "channelId": "TEST",
+      "txnInitChannel": "API",
+      "remitter": {
+        "accountNumber": "39278372271",
+        "accountHolderName": "Forum Nagar",
+        "mobileNumber": "919670266702",
+        "email": "ykrishnamurthy@example.org",
+        "bankName": "Kotak Mahindra Bank",
+        "ifscCode": "KKBK0712861",
+        "mmId": "9918287"
+      },
+      "beneficiary": {
+        "accountNumber": "7131910682522476",
+        "accountHolderName": "Yoshita Bedi",
+        "bankName": "Central Bank of India",
+        "ifscCode": "CBIN0492025",
+        "mobileNumber": "919245926686",
+        "email": null
+      },
+      "response": {
+        "responseCode": "1",
+        "isSuccess": true,
+        "message": "Success",
+        "utrNumber": "735884719765",
+        "retrievalReferenceNo": "702262021103"
+      },
+      "additionalDetails": {
+        "remarks": "Ex aspernatur aspernatur reprehenderit.",
+        "narration": "Facere sunt quo sint cupiditate vero distinctio mollitia repellat architecto.",
+        "serviceRequestId": "NB.TXN.API.INIT",
+        "serviceRequestVersion": "1.0",
+        "checksum": "7637023663"
+      },
+      "processingTimeMs": 1735
+    }
+  ]
+}

@@ -52,7 +52,34 @@ services:
       - redis
       - kafka
 
+  # Intent Router Layer
+  intent-router:
+    build: ./layers/intent-router
+    ports:
+      - "8006:8006"
+    environment:
+      - ENV=development
+      - DATABASE_URL=postgresql://user:pass@postgres:5432/arealis
+      - REDIS_URL=redis://redis:6379
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - COHERE_API_KEY=${COHERE_API_KEY}
+    depends_on:
+      - redis
+      - kafka
+      - postgres
+
   # Infrastructure Services
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=arealis
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
   redis:
     image: redis:7-alpine
     ports:
@@ -97,5 +124,6 @@ services:
       - grafana_data:/var/lib/grafana
 
 volumes:
+  postgres_data:
   redis_data:
   grafana_data:

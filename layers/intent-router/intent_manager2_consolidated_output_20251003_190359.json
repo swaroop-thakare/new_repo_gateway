@@ -1,0 +1,86 @@
+{
+  "batch_id": "B-CONSOLIDATED-20251003-190359",
+  "intents": [
+    {
+      "line_id": "L-1",
+      "intent": "VENDOR_PAYMENTS",
+      "risk_score": 0.45,
+      "confidence": 0.94,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "utrNumber": "25-03101903-1"
+      },
+      "evidence_ref": "s3://evidence/B-2025-10-03-01/L-1/intent.json",
+      "decision": "HOLD",
+      "reasons": [
+        "HIGH_RISK"
+      ],
+      "override": false
+    },
+    {
+      "line_id": "L-2",
+      "intent": "PAYROLL",
+      "risk_score": 0.25,
+      "confidence": 0.94,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "utrNumber": "25-03101903-2"
+      },
+      "evidence_ref": "s3://evidence/B-2025-10-03-02/L-2/intent.json",
+      "decision": "PASS",
+      "reasons": [
+        "KYC_OK",
+        "LIMITS_OK"
+      ],
+      "override": false
+    },
+    {
+      "line_id": "L-3",
+      "intent": "UNKNOWN",
+      "risk_score": 0.47,
+      "confidence": 0.83,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "utrNumber": "25-03101903-3"
+      },
+      "evidence_ref": "s3://evidence/B-2025-10-03-03/L-3/intent.json",
+      "decision": "HOLD",
+      "reasons": [
+        "LOW_CONFIDENCE",
+        "HIGH_RISK"
+      ],
+      "override": false
+    },
+    {
+      "line_id": "L-4",
+      "intent": "VENDOR_PAYMENTS",
+      "risk_score": 0.35,
+      "confidence": 0.94,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "utrNumber": "25-03101903-4"
+      },
+      "evidence_ref": "s3://evidence/B-2025-10-03-04/L-4/intent.json",
+      "decision": "OVERRIDE",
+      "reasons": [
+        "NEW_ACCOUNT (overridden)"
+      ],
+      "override": true
+    }
+  ],
+  "workflow_id": "WF-VENDOR-HOLD",
+  "agent_pipeline": [
+    "CRRAK",
+    "Execution",
+    "ARL",
+    "ACC",
+    "PDR"
+  ],
+  "policy_version": "intent-2.0.0",
+  "timestamp": "2025-10-03T19:03:59.377192Z",
+  "status": "PROCESSING"
+}

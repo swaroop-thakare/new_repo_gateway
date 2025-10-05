@@ -1,0 +1,25 @@
+{
+  "batch_id": "B-2025-10-03-03",
+  "intents": [
+    {
+      "line_id": "L-3",
+      "intent": "LOAN",
+      "risk_score": 0.48,
+      "confidence": 0.83,
+      "axis_validation": {
+        "code": "00",
+        "result": "Success",
+        "reference_number": "SAKR39267670",
+        "timestamp": "2025-10-05T00:56:49.031382"
+      },
+      "evidence_ref": "s3://arealis-evidence/evidence/AXIS_B-2025-10-05-01/L-3/intent.json",
+      "decision": "FAIL"
+    }
+  ],
+  "workflow_id": "WF-LOAN-FAIL",
+  "agent_pipeline": [
+    "CRRAK",
+    "RCA"
+  ],
+  "policy_version": "intent-2.0.0"
+}
