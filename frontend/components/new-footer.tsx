@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Twitter, Linkedin, Github } from "lucide-react"
+import { MagnusLogo } from "@/components/magnus-logo"
 
 export function NewFooter() {
   return (
@@ -7,12 +8,7 @@ export function NewFooter() {
       <div className="container px-4 py-12 md:px-6 md:py-16">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded text-primary-foreground font-bold text-sm bg-primary">
-                AG
-              </div>
-              <span className="font-bold text-lg">Arealis Magnus</span>
-            </div>
+            <MagnusLogo showText={true} textClassName="text-lg" />
             <p className="text-sm text-muted-foreground">Intelligent payout orchestration for modern finance teams.</p>
           </div>
 

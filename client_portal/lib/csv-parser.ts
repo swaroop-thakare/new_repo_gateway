@@ -75,7 +75,7 @@ function parseCSVLine(line: string): string[] {
   fields.push(current.trim());
   
   // Process fields - remove quotes and handle empty values
-  return fields.map(field => {
+  const processedFields = fields.map(field => {
     let processed = field.trim();
     // Remove surrounding quotes if present
     if (processed.startsWith('"') && processed.endsWith('"') && processed.length > 1) {
@@ -83,6 +83,13 @@ function parseCSVLine(line: string): string[] {
     }
     return processed;
   });
+  
+  // Remove trailing empty fields (caused by trailing commas)
+  while (processedFields.length > 0 && processedFields[processedFields.length - 1] === '') {
+    processedFields.pop();
+  }
+  
+  return processedFields;
 }
 
 export function parseCSV(csvText: string): ParsedTransaction[] {
@@ -119,21 +126,152 @@ export function parseCSV(csvText: string): ParsedTransaction[] {
     let values = parseCSVLine(line);
     console.log(`Raw values count: ${values.length}, Headers count: ${headers.length}`);
     
-    // CRITICAL FIX: Ensure values array matches headers length exactly
+    // CRITICAL FIX: Handle trailing commas and ensure exact column count
     if (values.length !== headers.length) {
       console.log(`⚠️ Column count mismatch: ${values.length} vs ${headers.length}`);
+      console.log(`Raw values:`, values);
       
-      // Pad with empty strings if too few columns
+      // Remove ALL trailing empty values (caused by trailing commas)
+      while (values.length > 0 && (values[values.length - 1] === '' || values[values.length - 1] === ' ')) {
+        values.pop();
+      }
+      
+      // CRITICAL: If we still have more columns than headers, remove the excess from the end
+      if (values.length > headers.length) {
+        values = values.slice(0, headers.length);
+      }
+      
+      // CRITICAL: Handle the specific case where CSV has trailing commas causing field shift
+      // If we have exactly 2 extra trailing commas, we need to shift fields back
+      if (values.length === headers.length && values.length > 0) {
+        // Check if the last few fields are empty (indicating trailing commas)
+        const lastFields = values.slice(-3);
+        if (lastFields.every(field => field === '' || field === ' ')) {
+          // Remove the trailing empty fields and shift everything back
+          const nonEmptyValues = values.filter((val, index) => {
+            // Keep all fields except the last 2 empty ones
+            return index < values.length - 2 || (val !== '' && val !== ' ');
+          });
+          
+          // If we removed trailing empty fields, use the adjusted values
+          if (nonEmptyValues.length < values.length) {
+            values = nonEmptyValues;
+            // Pad with empty strings if needed
+            while (values.length < headers.length) {
+              values.push('');
+            }
+          }
+        }
+      }
+      
+      // Pad with empty strings if too few columns (at the end)
       while (values.length < headers.length) {
         values.push('');
       }
       
-      // Truncate if too many columns
+      // CRITICAL: Handle the case where CSV has fewer fields than headers
+      // This happens when the CSV is missing trailing fields
+      if (values.length < headers.length) {
+        console.log(`⚠️ CSV has ${values.length} fields but ${headers.length} headers`);
+        console.log(`⚠️ Missing ${headers.length - values.length} fields at the end`);
+        
+        // The issue is that missing fields at the end cause field misalignment
+        // We need to ensure the vendor payment fields are in the correct positions
+        // For vendor payments, the key fields should be:
+        // - invoice_number (position 21)
+        // - invoice_date (position 22) 
+        // - gst_number (position 23)
+        // - pan_number (position 24)
+        // - vendor_code (position 25)
+        
+        // If we have vendor payment data, we need to check if the fields are shifted
+        if (values[21] && values[21] !== '') {
+          console.log(`🔍 Checking vendor payment field alignment:`);
+          console.log(`  Position 21 (invoice_number): "${values[21]}"`);
+          console.log(`  Position 22 (invoice_date): "${values[22] || ''}"`);
+          console.log(`  Position 23 (gst_number): "${values[23] || ''}"`);
+          console.log(`  Position 24 (pan_number): "${values[24] || ''}"`);
+          console.log(`  Position 25 (vendor_code): "${values[25] || ''}"`);
+          
+          // If the first field looks like an invoice number, we're good
+          // If it looks like a date, we need to shift
+          if (values[21].match(/^INV\d+$/)) {
+            console.log(`✅ Field alignment looks correct`);
+          } else {
+            console.log(`⚠️ Field alignment may be incorrect`);
+          }
+        }
+      }
+      
+      // CRITICAL: Handle the specific case where vendor payment fields are shifted
+      // This happens when the CSV has trailing commas or missing fields
+      if (values.length >= 25 && values[21] && values[21] !== '') {
+        // Check if this looks like a vendor payment with shifted fields
+        if (values[21].match(/^INV\d+$/) && values[22] && values[22].match(/^\d{4}-\d{2}-\d{2}$/)) {
+          console.log(`🔍 Detected vendor payment with correct field alignment`);
+        } else if (values[22] && values[22].match(/^INV\d+$/)) {
+          console.log(`🔍 Detected vendor payment with shifted fields - fixing...`);
+          
+          // The fields are shifted by 1 position to the right
+          // We need to shift them back to the correct positions
+          const shiftedValues = [...values];
+          
+          // Shift the vendor payment fields back to correct positions
+          if (shiftedValues[22] && shiftedValues[22].match(/^INV\d+$/)) {
+            // invoice_number is in position 22, should be in position 21
+            shiftedValues[21] = shiftedValues[22];
+            shiftedValues[22] = shiftedValues[23] || '';
+            shiftedValues[23] = shiftedValues[24] || '';
+            shiftedValues[24] = shiftedValues[25] || '';
+            shiftedValues[25] = shiftedValues[26] || '';
+            
+            // Update the values array
+            values = shiftedValues;
+            console.log(`✅ Fixed vendor payment field alignment`);
+          }
+        }
+      }
+      
+      // CRITICAL: Handle the case where CSV has more fields than headers
+      // This happens when the CSV has trailing commas causing extra fields
+      if (values.length > headers.length) {
+        console.log(`⚠️ CSV has ${values.length} fields but ${headers.length} headers`);
+        console.log(`⚠️ Extra ${values.length - headers.length} fields at the end`);
+        
+        // Remove the extra fields from the end
+        values = values.slice(0, headers.length);
+        console.log(`✅ Truncated to ${values.length} fields`);
+      }
+      
+      // CRITICAL: Handle the case where CSV has empty fields causing field shift
+      // This happens when the CSV has empty fields at positions 20-21
+      if (values[21] === '' && values[22] && values[22].match(/^INV\d+$/)) {
+        console.log(`🔍 Detected field shift - fixing...`);
+        
+        // Shift the vendor payment fields to correct positions
+        values[21] = values[22]; // invoice_number
+        values[22] = values[23] || ''; // invoice_date
+        values[23] = values[24] || ''; // gst_number
+        values[24] = values[25] || ''; // pan_number
+        values[25] = values[26] || ''; // vendor_code
+        
+        console.log(`✅ Fixed field alignment`);
+      }
+      
+      console.log(`✅ Final field mapping for row ${i + 1}:`);
+      console.log(`  invoice_number: "${values[21] || ''}"`);
+      console.log(`  invoice_date: "${values[22] || ''}"`);
+      console.log(`  gst_number: "${values[23] || ''}"`);
+      console.log(`  pan_number: "${values[24] || ''}"`);
+      console.log(`  vendor_code: "${values[25] || ''}"`);
+      
+      // Truncate if still too many columns
       if (values.length > headers.length) {
         values = values.slice(0, headers.length);
       }
       
       console.log(`✅ Adjusted to ${values.length} columns`);
+      console.log(`Adjusted values:`, values);
     }
 
     // Create row object with exact field mapping
@@ -144,6 +282,14 @@ export function parseCSV(csvText: string): ParsedTransaction[] {
     
     console.log(`✅ Row ${i + 1} mapped successfully`);
     console.log(`Key fields - PAN: "${row.pan_number}", Invoice: "${row.invoice_number}", Status: "${row.borrower_verification_status}"`);
+    console.log(`Full row mapping:`, {
+      pan_number: row.pan_number,
+      gst_number: row.gst_number,
+      invoice_number: row.invoice_number,
+      invoice_date: row.invoice_date,
+      vendor_code: row.vendor_code,
+      borrower_verification_status: row.borrower_verification_status
+    });
 
     try {
       const transaction = parseRowToTransaction(row, i + 1);

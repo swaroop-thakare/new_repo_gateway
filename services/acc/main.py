@@ -11,15 +11,16 @@ from database import (
     get_payment_files, get_payment_file_by_id, get_payment_files_count,
     search_payment_files, get_latest_payment_files
 )
+from sqlalchemy import func, and_
  
 app = FastAPI(title="ACC Agent Service", version="1.1")
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:3001", "http://127.0.0.1:3001"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
@@ -516,3 +517,761 @@ def get_payment_files_count_endpoint(db: Session = Depends(get_db), api_key: str
         }
     except Exception as e:
         return {"success": False, "message": f"Error counting payment files: {str(e)}"}
+
+@app.options("/acc/vendor-payments")
+def options_vendor_payments():
+    """Handle OPTIONS request for CORS"""
+    return {"message": "OK"}
+
+@app.get("/acc/vendor-payments")
+def get_vendor_payments(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Get vendor payment data for dashboard"""
+    try:
+        # Get all vendor payment transactions from acc_agent table
+        vendor_payments = db.query(AccAgent).filter(
+            AccAgent.line_id.like("VEN%")
+        ).all()
+        
+        # Get payment files data to extract method information
+        payment_files = db.query(PaymentFile).all()
+        
+        # Create a mapping of transaction_id to method from payment_files
+        transaction_method_map = {}
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of transaction_id and method columns
+                        try:
+                            transaction_id_idx = headers.index('transaction_id')
+                            method_idx = headers.index('method')
+                        except ValueError:
+                            continue
+                        
+                        # Map each row to transaction_id -> method
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(transaction_id_idx, method_idx):
+                                transaction_id = row[transaction_id_idx]
+                                method = row[method_idx]
+                                if transaction_id and method:
+                                    transaction_method_map[transaction_id] = method
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        if not vendor_payments:
+            return {
+                "success": True,
+                "data": {
+                    "kpis": {
+                        "total_paid": 0,
+                        "vendors_count": 0,
+                        "pending_approvals": 0,
+                        "avg_settlement_time": "T+0 days"
+                    },
+                    "charts": {
+                        "vendor_bar_data": [],
+                        "vendor_pie_data": []
+                    },
+                    "invoices": [],
+                    "pass_fail_breakdown": {
+                        "pass_count": 0,
+                        "fail_count": 0,
+                        "total_transactions": 0,
+                        "pass_percentage": 0,
+                        "fail_percentage": 0
+                    }
+                }
+            }
+        
+        # Calculate KPIs - exclude FAIL transactions from total_paid
+        total_paid = sum(float(payment.amount) for payment in vendor_payments if payment.status == "PASS")
+        unique_vendors = len(set(payment.beneficiary for payment in vendor_payments))
+        pending_approvals = len([p for p in vendor_payments if p.status == "PENDING"])
+        
+        # Calculate pass/fail breakdown for dynamic visualization
+        pass_count = len([p for p in vendor_payments if p.status == "PASS"])
+        fail_count = len([p for p in vendor_payments if p.status == "FAIL"])
+        total_transactions = len(vendor_payments)
+        
+        # Prepare chart data - include both PASS and FAIL transactions
+        vendor_amounts = {}
+        for payment in vendor_payments:
+            vendor = payment.beneficiary
+            amount = float(payment.amount)
+            if vendor in vendor_amounts:
+                vendor_amounts[vendor] += amount
+            else:
+                vendor_amounts[vendor] = amount
+        
+        # Sort vendors by amount and take top 10
+        sorted_vendors = sorted(vendor_amounts.items(), key=lambda x: x[1], reverse=True)[:10]
+        vendor_bar_data = [{"vendor": vendor, "amount": amount} for vendor, amount in sorted_vendors]
+        
+        # Prepare pie chart data
+        vendor_pie_data = [{"name": vendor, "value": amount} for vendor, amount in sorted_vendors[:5]]
+        
+        # Prepare invoice data - include both PASS and FAIL transactions
+        invoices = []
+        for payment in vendor_payments:
+            # Map status from ACC agent to display status
+            display_status = "Paid" if payment.status == "PASS" else "Failed" if payment.status == "FAIL" else "Pending"
+            
+            # Get method from payment_files data
+            method = transaction_method_map.get(payment.line_id, "NEFT")  # Default to NEFT if not found
+            
+            invoices.append({
+                "vendor": payment.beneficiary,
+                "invoice_id": payment.line_id,
+                "amount": f"₹{float(payment.amount):,.0f}",
+                "mode": method,  # Use method from payment_files
+                "status": display_status,
+                "date": payment.created_at.strftime("%Y-%m-%d") if payment.created_at else "N/A",
+                "acc_status": payment.status,
+                "decision_reason": payment.decision_reason or "No specific reason provided"
+            })
+        
+        return {
+            "success": True,
+            "data": {
+                "kpis": {
+                    "total_paid": total_paid,
+                    "vendors_count": unique_vendors,
+                    "pending_approvals": pending_approvals,
+                    "avg_settlement_time": "T+1.2 days"
+                },
+                "charts": {
+                    "vendor_bar_data": vendor_bar_data,
+                    "vendor_pie_data": vendor_pie_data
+                },
+                "invoices": invoices,
+                "pass_fail_breakdown": {
+                    "pass_count": pass_count,
+                    "fail_count": fail_count,
+                    "total_transactions": total_transactions,
+                    "pass_percentage": round((pass_count / total_transactions * 100) if total_transactions > 0 else 0, 1),
+                    "fail_percentage": round((fail_count / total_transactions * 100) if total_transactions > 0 else 0, 1)
+                }
+            }
+        }
+        
+    except Exception as e:
+        return {"success": False, "message": f"Error fetching vendor payments: {str(e)}"}
+
+@app.options("/acc/payroll-data")
+def options_payroll_data():
+    """Handle CORS preflight for payroll data endpoint"""
+    return {"message": "OK"}
+
+
+@app.get("/acc/payroll-data")
+def get_payroll_data(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Get payroll data for dashboard"""
+    try:
+        # Get payment files data to extract payroll transactions
+        payment_files = db.query(PaymentFile).all()
+        
+        # Find payroll transaction IDs from payment_files
+        payroll_transaction_ids = set()
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type and transaction_id columns
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                            transaction_id_idx = headers.index('transaction_id')
+                        except ValueError:
+                            continue
+                        
+                        # Find payroll transactions
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(payment_type_idx, transaction_id_idx):
+                                payment_type = row[payment_type_idx]
+                                transaction_id = row[transaction_id_idx]
+                                if payment_type == "payroll" and transaction_id:
+                                    payroll_transaction_ids.add(transaction_id)
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Get payroll transactions from AccAgent table
+        payroll_transactions = []
+        if payroll_transaction_ids:
+            payroll_transactions = db.query(AccAgent).filter(
+                AccAgent.line_id.in_(payroll_transaction_ids)
+            ).all()
+        
+        
+        # Create a mapping of transaction_id to additional data from payment_files
+        transaction_data_map = {}
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find relevant column indices
+                        try:
+                            transaction_id_idx = headers.index('transaction_id')
+                            employee_id_idx = headers.index('employee_id')
+                            department_idx = headers.index('department')
+                            payment_frequency_idx = headers.index('payment_frequency')
+                            method_idx = headers.index('method')
+                        except ValueError:
+                            continue
+                        
+                        # Map each row to transaction_id -> additional data
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(transaction_id_idx, employee_id_idx, department_idx, payment_frequency_idx, method_idx):
+                                transaction_id = row[transaction_id_idx]
+                                employee_id = row[employee_id_idx] if employee_id_idx < len(row) else ""
+                                department = row[department_idx] if department_idx < len(row) else ""
+                                payment_frequency = row[payment_frequency_idx] if payment_frequency_idx < len(row) else ""
+                                method = row[method_idx] if method_idx < len(row) else ""
+                                
+                                if transaction_id:
+                                    transaction_data_map[transaction_id] = {
+                                        'employee_id': employee_id,
+                                        'department': department,
+                                        'payment_frequency': payment_frequency,
+                                        'method': method
+                                    }
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        if not payroll_transactions:
+            return {
+                "success": True,
+                "data": {
+                    "kpis": {
+                        "this_month_volume": 0,
+                        "in_progress_runs": 0,
+                        "exceptions": 0,
+                        "avg_processing_time": "0h 0m"
+                    },
+                    "payroll_entries": []
+                }
+            }
+        
+        # Calculate KPIs
+        total_volume = sum(float(transaction.amount) for transaction in payroll_transactions if transaction.status == "PASS")
+        in_progress_runs = len([t for t in payroll_transactions if t.status == "PENDING"])
+        exceptions = len([t for t in payroll_transactions if t.status == "FAIL"])
+        
+        # Calculate average processing time (mock calculation)
+        avg_processing_time = "2h 14m"  # Default value
+        
+        # Group payroll transactions by company/entity
+        company_groups = {}
+        for transaction in payroll_transactions:
+            # Extract company from sender_name
+            company = transaction.beneficiary.split()[0] if transaction.beneficiary else "Unknown"
+            if company not in company_groups:
+                company_groups[company] = []
+            company_groups[company].append(transaction)
+        
+        # Create payroll entries
+        payroll_entries = []
+        for company, transactions in company_groups.items():
+            total_amount = sum(float(t.amount) for t in transactions)
+            pass_count = len([t for t in transactions if t.status == "PASS"])
+            fail_count = len([t for t in transactions if t.status == "FAIL"])
+            pending_count = len([t for t in transactions if t.status == "PENDING"])
+            
+            # Determine status
+            if pending_count > 0:
+                status = "In Progress"
+            elif fail_count > 0:
+                status = "Exceptions"
+            else:
+                status = "Completed"
+            
+            # Get latest transaction date
+            latest_date = max(t.created_at for t in transactions if t.created_at)
+            
+            payroll_entries.append({
+                "id": f"payroll-{company.lower().replace(' ', '-')}",
+                "date": latest_date.strftime("%b %d") if latest_date else "N/A",
+                "entity": company,
+                "sub_entity": f"{company} Ltd",
+                "total_amount": total_amount,
+                "currency": "INR",  # Default to INR
+                "status": status,
+                "progress": {
+                    "completed": pass_count,
+                    "failed": fail_count,
+                    "pending": pending_count,
+                    "total": len(transactions)
+                },
+                "employees": len(transactions),
+                "departments": list(set(transaction_data_map.get(t.line_id, {}).get('department', '') for t in transactions if transaction_data_map.get(t.line_id, {}).get('department')))
+            })
+        
+        # Sort by date (most recent first)
+        payroll_entries.sort(key=lambda x: x.get('date', ''), reverse=True)
+        
+        return {
+            "success": True,
+            "data": {
+                "kpis": {
+                    "this_month_volume": total_volume,
+                    "in_progress_runs": in_progress_runs,
+                    "exceptions": exceptions,
+                    "avg_processing_time": avg_processing_time
+                },
+                "payroll_entries": payroll_entries
+            }
+        }
+        
+    except Exception as e:
+        return {"success": False, "message": f"Error fetching payroll data: {str(e)}"}
+
+@app.options("/acc/clear-vendor-data")
+def options_clear_vendor_data():
+    """Handle CORS preflight for clear vendor data endpoint"""
+    return {"message": "OK"}
+
+@app.delete("/acc/clear-vendor-data")
+def clear_vendor_data(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Clear all vendor payment data from database"""
+    try:
+        # Delete all vendor payment transactions from acc_agent table
+        vendor_transactions = db.query(AccAgent).filter(
+            AccAgent.line_id.like("VEN%")
+        ).all()
+        
+        for transaction in vendor_transactions:
+            db.delete(transaction)
+        
+        # Only clear payment files that contain ONLY vendor payment data (not mixed files)
+        payment_files = db.query(PaymentFile).all()
+        files_to_delete = []
+        
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Check if this file contains ONLY vendor payment data
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type column
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                        except ValueError:
+                            continue
+                        
+                        # Check if ALL rows have vendor_payment (not mixed)
+                        all_vendor_payment = True
+                        has_any_data = False
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > payment_type_idx:
+                                payment_type = row[payment_type_idx]
+                                has_any_data = True
+                                if payment_type != "vendor_payment":
+                                    all_vendor_payment = False
+                                    break
+                        
+                        # Only delete files that contain ONLY vendor payment data
+                        if all_vendor_payment and has_any_data:
+                            files_to_delete.append(pf)
+                            
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Delete payment files that contain ONLY vendor payment data
+        for pf in files_to_delete:
+            db.delete(pf)
+        
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": f"Cleared {len(vendor_transactions)} vendor transactions and {len(files_to_delete)} payment files"
+        }
+        
+    except Exception as e:
+        db.rollback()
+        return {"success": False, "message": f"Error clearing vendor data: {str(e)}"}
+
+@app.options("/acc/clear-payroll-data")
+def options_clear_payroll_data():
+    """Handle CORS preflight for clear payroll data endpoint"""
+    return {"message": "OK"}
+
+@app.delete("/acc/clear-payroll-data")
+def clear_payroll_data(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Clear all payroll data from database"""
+    try:
+        # Find payroll transaction IDs from payment_files
+        payment_files = db.query(PaymentFile).all()
+        payroll_transaction_ids = set()
+        
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type and transaction_id columns
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                            transaction_id_idx = headers.index('transaction_id')
+                        except ValueError:
+                            continue
+                        
+                        # Find payroll transactions
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(payment_type_idx, transaction_id_idx):
+                                payment_type = row[payment_type_idx]
+                                transaction_id = row[transaction_id_idx]
+                                if payment_type == "payroll" and transaction_id:
+                                    payroll_transaction_ids.add(transaction_id)
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Delete payroll transactions from acc_agent table
+        payroll_transactions = []
+        if payroll_transaction_ids:
+            payroll_transactions = db.query(AccAgent).filter(
+                AccAgent.line_id.in_(payroll_transaction_ids)
+            ).all()
+        
+        for transaction in payroll_transactions:
+            db.delete(transaction)
+        
+        # Only clear payment files that contain ONLY payroll data (not mixed files)
+        files_to_delete = []
+        
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Check if this file contains ONLY payroll data
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type column
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                        except ValueError:
+                            continue
+                        
+                        # Check if ALL rows have payroll payment_type (not mixed)
+                        all_payroll = True
+                        has_any_data = False
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > payment_type_idx:
+                                payment_type = row[payment_type_idx]
+                                has_any_data = True
+                                if payment_type != "payroll":
+                                    all_payroll = False
+                                    break
+                        
+                        # Only delete files that contain ONLY payroll data
+                        if all_payroll and has_any_data:
+                            files_to_delete.append(pf)
+                            
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Delete payment files that contain ONLY payroll data
+        for pf in files_to_delete:
+            db.delete(pf)
+        
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": f"Cleared {len(payroll_transactions)} payroll transactions and {len(files_to_delete)} payroll-only payment files"
+        }
+        
+    except Exception as e:
+        db.rollback()
+        return {"success": False, "message": f"Error clearing payroll data: {str(e)}"}
+
+@app.options("/acc/loan-disbursement-data")
+def options_loan_disbursement_data():
+    """Handle CORS preflight for loan disbursement data endpoint"""
+    return {"message": "OK"}
+
+@app.get("/acc/loan-disbursement-data")
+def get_loan_disbursement_data(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Get loan disbursement data for dashboard"""
+    try:
+        # Get payment files data to extract loan disbursement transactions
+        payment_files = db.query(PaymentFile).all()
+        
+        # Find loan disbursement transaction IDs from payment_files
+        loan_transaction_ids = set()
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type and transaction_id columns
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                            transaction_id_idx = headers.index('transaction_id')
+                        except ValueError:
+                            continue
+                        
+                        # Find loan disbursement transactions
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(payment_type_idx, transaction_id_idx):
+                                payment_type = row[payment_type_idx]
+                                transaction_id = row[transaction_id_idx]
+                                if payment_type == "loan_disbursement" and transaction_id:
+                                    loan_transaction_ids.add(transaction_id)
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Get loan disbursement transactions from AccAgent table
+        loan_transactions = []
+        if loan_transaction_ids:
+            loan_transactions = db.query(AccAgent).filter(
+                AccAgent.line_id.in_(loan_transaction_ids)
+            ).all()
+        
+        # Create a mapping of transaction_id to additional data from payment_files
+        transaction_data_map = {}
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find relevant column indices
+                        try:
+                            transaction_id_idx = headers.index('transaction_id')
+                            method_idx = headers.index('method')
+                        except ValueError:
+                            continue
+                        
+                        # Map each row to transaction_id -> additional data
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(transaction_id_idx, method_idx):
+                                transaction_id = row[transaction_id_idx]
+                                method = row[method_idx] if method_idx < len(row) else ""
+                                
+                                if transaction_id:
+                                    transaction_data_map[transaction_id] = {
+                                        'method': method
+                                    }
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        if not loan_transactions:
+            return {
+                "success": True,
+                "data": {
+                    "kpis": {
+                        "total_disbursed": 0,
+                        "pending_approvals": 0,
+                        "success_rate": 0,
+                        "avg_time_to_disburse": "0 mins"
+                    },
+                    "recent_disbursements": []
+                }
+            }
+        
+        # Calculate KPIs
+        total_disbursed = sum(float(transaction.amount) for transaction in loan_transactions if transaction.status == "PASS")
+        pending_approvals = len([t for t in loan_transactions if t.status == "PENDING"])
+        pass_count = len([t for t in loan_transactions if t.status == "PASS"])
+        fail_count = len([t for t in loan_transactions if t.status == "FAIL"])
+        total_count = len(loan_transactions)
+        success_rate = (pass_count / total_count * 100) if total_count > 0 else 0
+        
+        # Calculate average time to disburse (mock calculation)
+        avg_time_to_disburse = "42 mins"  # Default value
+        
+        # Prepare recent disbursements
+        recent_disbursements = []
+        for transaction in loan_transactions:
+            # Extract method from transaction_data_map
+            method = transaction_data_map.get(transaction.line_id, {}).get('method', 'NEFT')
+            
+            # Determine status display
+            if transaction.status == "PASS":
+                status_display = "Approved"
+            elif transaction.status == "PENDING":
+                status_display = "Pending"
+            else:
+                status_display = "Failed"
+            
+            # Hardcoded product types (visible only if data exists)
+            product_types = ["Retail", "SME", "Corporate"]
+            product_type = product_types[hash(transaction.line_id) % len(product_types)]
+            
+            recent_disbursements.append({
+                "loan_id": transaction.line_id,
+                "borrower": transaction.beneficiary,
+                "product_type": product_type,
+                "amount": float(transaction.amount),
+                "mode": method,
+                "status": status_display,
+                "date": transaction.created_at.strftime("%Y-%m-%d") if transaction.created_at else "N/A",
+                "acc_status": transaction.status,
+                "decision_reason": transaction.decision_reason if transaction.status == "FAIL" else None
+            })
+        
+        # Sort by date (most recent first)
+        recent_disbursements.sort(key=lambda x: x['date'], reverse=True)
+        
+        return {
+            "success": True,
+            "data": {
+                "kpis": {
+                    "total_disbursed": total_disbursed,
+                    "pending_approvals": pending_approvals,
+                    "success_rate": round(success_rate, 1),
+                    "avg_time_to_disburse": avg_time_to_disburse
+                },
+                "recent_disbursements": recent_disbursements
+            }
+        }
+        
+    except Exception as e:
+        return {"success": False, "message": f"Error fetching loan disbursement data: {str(e)}"}
+
+@app.options("/acc/clear-loan-data")
+def options_clear_loan_data():
+    """Handle CORS preflight for clear loan data endpoint"""
+    return {"message": "OK"}
+
+@app.delete("/acc/clear-loan-data")
+def clear_loan_data(db: Session = Depends(get_db), api_key: str = Depends(verify_api_key)):
+    """Clear all loan disbursement data from database"""
+    try:
+        # Find loan disbursement transaction IDs from payment_files
+        payment_files = db.query(PaymentFile).all()
+        loan_transaction_ids = set()
+        
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Handle the actual data structure: {"headers": [...], "rows": [...]}
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type and transaction_id columns
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                            transaction_id_idx = headers.index('transaction_id')
+                        except ValueError:
+                            continue
+                        
+                        # Find loan disbursement transactions
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > max(payment_type_idx, transaction_id_idx):
+                                payment_type = row[payment_type_idx]
+                                transaction_id = row[transaction_id_idx]
+                                if payment_type == "loan_disbursement" and transaction_id:
+                                    loan_transaction_ids.add(transaction_id)
+                                    
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Delete loan disbursement transactions from acc_agent table
+        loan_transactions = []
+        if loan_transaction_ids:
+            loan_transactions = db.query(AccAgent).filter(
+                AccAgent.line_id.in_(loan_transaction_ids)
+            ).all()
+        
+        for transaction in loan_transactions:
+            db.delete(transaction)
+        
+        # Only clear payment files that contain ONLY loan disbursement data (not mixed files)
+        files_to_delete = []
+        
+        for pf in payment_files:
+            if pf.data:
+                try:
+                    data = json.loads(pf.data) if isinstance(pf.data, str) else pf.data
+                    
+                    # Check if this file contains ONLY loan disbursement data
+                    if 'headers' in data and 'rows' in data and isinstance(data['rows'], list):
+                        headers = data['headers']
+                        rows = data['rows']
+                        
+                        # Find the index of payment_type column
+                        try:
+                            payment_type_idx = headers.index('payment_type')
+                        except ValueError:
+                            continue
+                        
+                        # Check if ALL rows have loan_disbursement payment_type (not mixed)
+                        all_loan_disbursement = True
+                        has_any_data = False
+                        for row in rows:
+                            if isinstance(row, list) and len(row) > payment_type_idx:
+                                payment_type = row[payment_type_idx]
+                                has_any_data = True
+                                if payment_type != "loan_disbursement":
+                                    all_loan_disbursement = False
+                                    break
+                        
+                        # Only delete files that contain ONLY loan disbursement data
+                        if all_loan_disbursement and has_any_data:
+                            files_to_delete.append(pf)
+                            
+                except (json.JSONDecodeError, KeyError, TypeError, ValueError):
+                    continue
+        
+        # Delete payment files that contain ONLY loan disbursement data
+        for pf in files_to_delete:
+            db.delete(pf)
+        
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": f"Cleared {len(loan_transactions)} loan disbursement transactions and {len(files_to_delete)} loan-only payment files"
+        }
+        
+    except Exception as e:
+        db.rollback()
+        return {"success": False, "message": f"Error clearing loan disbursement data: {str(e)}"}

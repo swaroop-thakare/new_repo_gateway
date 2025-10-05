@@ -12,16 +12,18 @@ import { NewFooter } from "@/components/new-footer"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
-      <NewHeroSection />
-      <AboutSection />
-      <CoreFeaturesSection />
-      <HowItWorksSection />
-      <SecuritySection />
-      <WhyChooseSection />
-      <PricingSection />
-      <FinalCTASection />
-      <NewFooter />
+      <div className="max-w-7xl mx-auto">
+        <Header />
+        <NewHeroSection />
+        <AboutSection />
+        <CoreFeaturesSection />
+        <HowItWorksSection />
+        <SecuritySection />
+        <WhyChooseSection />
+        <PricingSection />
+        <FinalCTASection />
+        <NewFooter />
+      </div>
     </main>
   )
 }

@@ -1,16 +1,14 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { MagnusLogo } from "@/components/magnus-logo"
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-sm shadow-sm">
-            AG
-          </div>
-          <span className="font-heading text-xl font-semibold tracking-tight">Arealis Magnus</span>
+        <Link href="/" className="hover:opacity-80 transition-opacity">
+          <MagnusLogo showText={true} />
         </Link>
 
         <div className="flex items-center gap-6">

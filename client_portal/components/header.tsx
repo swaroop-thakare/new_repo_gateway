@@ -2,12 +2,16 @@
 
 import { User, LayoutDashboard } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { MagnusLogo } from "@/components/magnus-logo"
 
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-card/95 backdrop-blur-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 className="text-xl font-semibold text-foreground">Arealis  Magnus - Client Ingestion</h1>
+        <div className="flex items-center gap-2">
+          <MagnusLogo showText={true} />
+          <span className="text-sm text-muted-foreground">- Client Ingestion</span>
+        </div>
 
         <div className="flex items-center gap-4">
           <Button variant="ghost" className="text-foreground hover:text-primary">

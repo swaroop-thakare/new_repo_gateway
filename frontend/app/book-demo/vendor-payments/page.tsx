@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,27 +17,7 @@ import {
   Pie,
   Cell,
 } from "recharts"
-
-const VENDOR_BAR_DATA = [
-  { vendor: "Acme", amount: 4820000 },
-  { vendor: "PrimeLog", amount: 1760000 },
-  { vendor: "TechNova", amount: 940000 },
-  { vendor: "Metro", amount: 330000 },
-  { vendor: "OmniTrade", amount: 280000 },
-  { vendor: "RapidTrans", amount: 240000 },
-  { vendor: "GreenWorks", amount: 210000 },
-  { vendor: "BluePeak", amount: 195000 },
-  { vendor: "SilverEdge", amount: 175000 },
-  { vendor: "NovaCraft", amount: 160000 },
-]
-
-const TOP_VENDORS_PIE = [
-  { name: "Acme", value: 48.2 },
-  { name: "PrimeLog", value: 17.6 },
-  { name: "TechNova", value: 9.4 },
-  { name: "Metro", value: 3.3 },
-  { name: "Others", value: 21.5 },
-]
+import { fetchVendorPayments, formatCurrency, type VendorPaymentData } from "@/lib/api"
 
 const PIE_COLORS = ["#22c55e", "#38bdf8", "#f59e0b", "#f43f5e", "#8b5cf6"]
 
@@ -48,42 +28,9 @@ type Row = {
   mode: "NEFT" | "UPI" | "IMPS" | "RTGS"
   status: "Paid" | "Pending" | "Failed"
   date: string
+  acc_status: string
+  decision_reason: string
 }
-
-const ROWS: Row[] = [
-  {
-    vendor: "Acme Supplies",
-    invoiceId: "INV-10021",
-    amount: "₹4,820,000",
-    mode: "NEFT",
-    status: "Paid",
-    date: "2025-10-02",
-  },
-  {
-    vendor: "Prime Logistics",
-    invoiceId: "INV-10022",
-    amount: "₹1,760,000",
-    mode: "IMPS",
-    status: "Pending",
-    date: "2025-10-02",
-  },
-  {
-    vendor: "TechNova Pvt Ltd",
-    invoiceId: "INV-10018",
-    amount: "₹940,000",
-    mode: "UPI",
-    status: "Paid",
-    date: "2025-10-01",
-  },
-  {
-    vendor: "Metro Services",
-    invoiceId: "INV-10017",
-    amount: "₹330,000",
-    mode: "NEFT",
-    status: "Failed",
-    date: "2025-10-01",
-  },
-]
 
 export default function VendorPaymentsPage() {
   const [query, setQuery] = useState("")
@@ -91,12 +38,141 @@ export default function VendorPaymentsPage() {
   const [mode, setMode] = useState<"all" | "NEFT" | "UPI" | "IMPS" | "RTGS">("all")
   const [range, setRange] = useState<"week" | "month" | "custom">("week")
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const [vendorData, setVendorData] = useState<VendorPaymentData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [processingActions, setProcessingActions] = useState<Set<string>>(new Set())
+
+  // Button handler functions
+  const handleApprove = async (invoiceId: string, vendor: string) => {
+    const actionKey = `approve-${invoiceId}`
+    setProcessingActions(prev => new Set(prev).add(actionKey))
+    
+    console.log(`✅ Approving invoice ${invoiceId} for vendor ${vendor}`)
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    
+    alert(`Invoice ${invoiceId} for ${vendor} has been approved!`)
+    setProcessingActions(prev => {
+      const newSet = new Set(prev)
+      newSet.delete(actionKey)
+      return newSet
+    })
+  }
+
+  const handleRetry = async (invoiceId: string, vendor: string) => {
+    const actionKey = `retry-${invoiceId}`
+    setProcessingActions(prev => new Set(prev).add(actionKey))
+    
+    console.log(`🔄 Retrying invoice ${invoiceId} for vendor ${vendor}`)
+    
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500))
+    
+    alert(`Retrying payment for invoice ${invoiceId} (${vendor})...`)
+    setProcessingActions(prev => {
+      const newSet = new Set(prev)
+      newSet.delete(actionKey)
+      return newSet
+    })
+  }
+
+  const handleExport = async (invoiceId: string, vendor: string) => {
+    const actionKey = `export-${invoiceId}`
+    setProcessingActions(prev => new Set(prev).add(actionKey))
+    
+    console.log(`📤 Exporting invoice ${invoiceId} for vendor ${vendor}`)
+    
+    // Simulate export process
+    await new Promise(resolve => setTimeout(resolve, 800))
+    
+    alert(`Exporting invoice ${invoiceId} for ${vendor}...`)
+    setProcessingActions(prev => {
+      const newSet = new Set(prev)
+      newSet.delete(actionKey)
+      return newSet
+    })
+  }
+
+  const handleViewHistory = (invoiceId: string, vendor: string) => {
+    console.log(`📊 Viewing history for invoice ${invoiceId} (${vendor})`)
+    alert(`Opening vendor history for ${vendor} (Invoice: ${invoiceId})...`)
+  }
+
+  const handleExportAll = async () => {
+    console.log(`📤 Exporting all vendor invoices`)
+    const totalInvoices = vendorData?.invoices?.length || 0
+    
+    // Simulate export process
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    
+    alert(`Exporting all ${totalInvoices} vendor invoices to CSV...`)
+  }
+
+  const handleClearAllData = async () => {
+    const confirmed = window.confirm(
+      "⚠️ WARNING: This will permanently delete ALL vendor payment data from the database.\n\n" +
+      "This action cannot be undone. Are you sure you want to continue?"
+    )
+    
+    if (!confirmed) return
+    
+    try {
+      console.log(`🗑️ Clearing all vendor payment data...`)
+      
+      // Call the clear data API
+      const response = await fetch('http://localhost:8000/acc/clear-vendor-data', {
+        method: 'DELETE',
+        headers: {
+          'X-API-Key': 'arealis_api_key_2024',
+          'Content-Type': 'application/json',
+        },
+      })
+      
+      if (response.ok) {
+        alert("✅ All vendor payment data has been cleared successfully!")
+        // Refresh the data
+        window.location.reload()
+      } else {
+        alert("❌ Failed to clear data. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error clearing data:", error)
+      alert("❌ Error clearing data. Please try again.")
+    }
+  }
+
+  // Fetch vendor payment data on component mount
+  useEffect(() => {
+    const loadVendorData = async () => {
+      try {
+        setLoading(true)
+        setError(null)
+        const data = await fetchVendorPayments()
+        if (data) {
+          setVendorData(data)
+        } else {
+          setError("Failed to load vendor payment data")
+        }
+      } catch (err) {
+        setError("Error loading vendor payment data")
+        console.error("Error loading vendor data:", err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadVendorData()
+  }, [])
 
   const filteredRows = useMemo(() => {
-    return ROWS.filter((r) => {
+    if (!vendorData?.invoices) return []
+    
+    return vendorData.invoices.filter((r) => {
       const matchQ = query
         ? r.vendor.toLowerCase().includes(query.toLowerCase()) ||
-          r.invoiceId.toLowerCase().includes(query.toLowerCase())
+          r.invoice_id.toLowerCase().includes(query.toLowerCase())
         : true
       const matchS =
         status === "all"
@@ -109,7 +185,7 @@ export default function VendorPaymentsPage() {
       const matchM = mode === "all" ? true : r.mode === mode
       return matchQ && matchS && matchM
     })
-  }, [query, status, mode])
+  }, [query, status, mode, vendorData])
 
   return (
     <div className="space-y-6">
@@ -123,27 +199,73 @@ export default function VendorPaymentsPage() {
           <CardHeader className="pb-2">
             <CardTitle className="text-sm text-gray-300">Total Paid</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-bold text-white">₹2.4 Cr</CardContent>
+          <CardContent className="text-2xl font-bold text-white">
+            {loading ? "Loading..." : vendorData ? formatCurrency(vendorData.kpis.total_paid) : "₹0"}
+          </CardContent>
         </Card>
         <Card className="glass-card border">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm text-gray-300">Vendors Count</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-bold text-white">20</CardContent>
+          <CardContent className="text-2xl font-bold text-white">
+            {loading ? "Loading..." : vendorData?.kpis.vendors_count || 0}
+          </CardContent>
         </Card>
         <Card className="glass-card border">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm text-gray-300">Pending Approvals</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-bold text-amber-400">3</CardContent>
+          <CardContent className="text-2xl font-bold text-amber-400">
+            {loading ? "Loading..." : vendorData?.kpis.pending_approvals || 0}
+          </CardContent>
         </Card>
         <Card className="glass-card border">
           <CardHeader className="pb-2">
             <CardTitle className="text-sm text-gray-300">Avg Settlement Time</CardTitle>
           </CardHeader>
-          <CardContent className="text-2xl font-bold text-white">T+1.2 days</CardContent>
+          <CardContent className="text-2xl font-bold text-white">
+            {loading ? "Loading..." : vendorData?.kpis.avg_settlement_time || "T+0 days"}
+          </CardContent>
         </Card>
       </div>
+
+      {/* Pass/Fail Breakdown */}
+      {vendorData?.pass_fail_breakdown && (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Card className="glass-card border">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-gray-300">Pass Transactions</CardTitle>
+            </CardHeader>
+            <CardContent className="text-2xl font-bold text-green-400">
+              {vendorData.pass_fail_breakdown.pass_count}
+            </CardContent>
+          </Card>
+          <Card className="glass-card border">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-gray-300">Fail Transactions</CardTitle>
+            </CardHeader>
+            <CardContent className="text-2xl font-bold text-red-400">
+              {vendorData.pass_fail_breakdown.fail_count}
+            </CardContent>
+          </Card>
+          <Card className="glass-card border">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-gray-300">Pass Rate</CardTitle>
+            </CardHeader>
+            <CardContent className="text-2xl font-bold text-green-400">
+              {vendorData.pass_fail_breakdown.pass_percentage}%
+            </CardContent>
+          </Card>
+          <Card className="glass-card border">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-sm text-gray-300">Fail Rate</CardTitle>
+            </CardHeader>
+            <CardContent className="text-2xl font-bold text-red-400">
+              {vendorData.pass_fail_breakdown.fail_percentage}%
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
       <div className="flex flex-wrap items-center gap-2">
         <Input
@@ -199,22 +321,28 @@ export default function VendorPaymentsPage() {
             <CardTitle className="text-sm text-gray-300">Payments by Vendor (Top 10)</CardTitle>
           </CardHeader>
           <CardContent className="h-[300px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={VENDOR_BAR_DATA}>
-                <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
-                <XAxis dataKey="vendor" stroke="rgba(255,255,255,0.6)" />
-                <YAxis stroke="rgba(255,255,255,0.6)" />
-                <Tooltip
-                  contentStyle={{
-                    background: "#0f0f0f",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    color: "white",
-                  }}
-                />
-                <Legend />
-                <Bar dataKey="amount" name="Amount (₹)" fill="hsl(217 91% 60%)" />
-              </BarChart>
-            </ResponsiveContainer>
+            {loading ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-gray-400">Loading chart data...</div>
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={vendorData?.charts.vendor_bar_data || []}>
+                  <CartesianGrid stroke="rgba(255,255,255,0.06)" vertical={false} />
+                  <XAxis dataKey="vendor" stroke="rgba(255,255,255,0.6)" />
+                  <YAxis stroke="rgba(255,255,255,0.6)" />
+                  <Tooltip
+                    contentStyle={{
+                      background: "#0f0f0f",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      color: "white",
+                    }}
+                  />
+                  <Legend />
+                  <Bar dataKey="amount" name="Amount (₹)" fill="hsl(217 91% 60%)" />
+                </BarChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
 
@@ -223,23 +351,29 @@ export default function VendorPaymentsPage() {
             <CardTitle className="text-sm text-gray-300">Top Vendors (Share %)</CardTitle>
           </CardHeader>
           <CardContent className="h-[300px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie dataKey="value" data={TOP_VENDORS_PIE} innerRadius={50} outerRadius={80} paddingAngle={4}>
-                  {TOP_VENDORS_PIE.map((_, i) => (
-                    <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip
-                  contentStyle={{
-                    background: "#0f0f0f",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    color: "white",
-                  }}
-                />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
+            {loading ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-gray-400">Loading chart data...</div>
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie dataKey="value" data={vendorData?.charts.vendor_pie_data || []} innerRadius={50} outerRadius={80} paddingAngle={4}>
+                    {(vendorData?.charts.vendor_pie_data || []).map((_, i) => (
+                      <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip
+                    contentStyle={{
+                      background: "#0f0f0f",
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      color: "white",
+                    }}
+                  />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -249,7 +383,18 @@ export default function VendorPaymentsPage() {
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm text-gray-300">Vendor Invoices</CardTitle>
             <div className="flex items-center gap-2">
-              <Button size="xs" variant="default">
+              <Button 
+                size="sm" 
+                variant="destructive"
+                onClick={() => handleClearAllData()}
+              >
+                Clear All Data
+              </Button>
+              <Button 
+                size="sm" 
+                variant="default"
+                onClick={() => handleExportAll()}
+              >
                 Export
               </Button>
             </div>
@@ -270,36 +415,81 @@ export default function VendorPaymentsPage() {
                 </tr>
               </thead>
               <tbody>
-                {filteredRows.map((r, idx) => (
-                  <tr key={idx} className="border-t border-white/10 hover:bg-white/5">
-                    <td className="px-3 py-2 text-white">{r.vendor}</td>
-                    <td className="px-3 py-2 text-white">{r.invoiceId}</td>
-                    <td className="px-3 py-2 text-white">{r.amount}</td>
-                    <td className="px-3 py-2 text-gray-300">{r.mode}</td>
-                    <td
-                      className={`px-3 py-2 ${r.status === "Paid" ? "text-green-400" : r.status === "Pending" ? "text-yellow-400" : "text-red-400"}`}
-                    >
-                      {r.status}
-                    </td>
-                    <td className="px-3 py-2 text-gray-300">{r.date}</td>
-                    <td className="px-3 py-2">
-                      <div className="flex flex-wrap gap-1">
-                        <Button size="xs" variant="default">
-                          Approve
-                        </Button>
-                        <Button size="xs" variant="outline">
-                          Retry
-                        </Button>
-                        <Button size="xs" variant="outline">
-                          Export
-                        </Button>
-                        <Button size="xs" variant="ghost">
-                          View Vendor History
-                        </Button>
-                      </div>
+                {loading ? (
+                  <tr>
+                    <td colSpan={7} className="px-3 py-8 text-center text-gray-400">
+                      Loading vendor invoices...
                     </td>
                   </tr>
-                ))}
+                ) : error ? (
+                  <tr>
+                    <td colSpan={7} className="px-3 py-8 text-center text-red-400">
+                      Error loading data: {error}
+                    </td>
+                  </tr>
+                ) : filteredRows.length === 0 ? (
+                  <tr>
+                    <td colSpan={7} className="px-3 py-8 text-center text-gray-400">
+                      No vendor payments found
+                    </td>
+                  </tr>
+                ) : (
+                  filteredRows.map((r, idx) => (
+                    <tr key={idx} className="border-t border-white/10 hover:bg-white/5">
+                      <td className="px-3 py-2 text-white">{r.vendor}</td>
+                      <td className="px-3 py-2 text-white">{r.invoice_id}</td>
+                      <td className="px-3 py-2 text-white">{r.amount}</td>
+                      <td className="px-3 py-2 text-gray-300">{r.mode}</td>
+                      <td
+                        className={`px-3 py-2 ${r.status === "Paid" ? "text-green-400" : r.status === "Pending" ? "text-yellow-400" : "text-red-400"}`}
+                      >
+                        {r.status}
+                      </td>
+                      <td className="px-3 py-2 text-gray-300">{r.date}</td>
+                      <td className="px-3 py-2">
+                        <div className="flex flex-wrap gap-1">
+                          <div className="text-xs text-gray-300 mb-1 w-full">
+                            <strong>ACC Status:</strong> {r.acc_status}
+                          </div>
+                          <div className="text-xs text-gray-400 mb-2 w-full">
+                            <strong>Reason:</strong> {r.decision_reason}
+                          </div>
+                          <Button 
+                            size="sm" 
+                            variant="default"
+                            onClick={() => handleApprove(r.invoice_id, r.vendor)}
+                            disabled={processingActions.has(`approve-${r.invoice_id}`)}
+                          >
+                            {processingActions.has(`approve-${r.invoice_id}`) ? "Processing..." : "Approve"}
+                          </Button>
+                          <Button 
+                            size="sm" 
+                            variant="outline"
+                            onClick={() => handleRetry(r.invoice_id, r.vendor)}
+                            disabled={processingActions.has(`retry-${r.invoice_id}`)}
+                          >
+                            {processingActions.has(`retry-${r.invoice_id}`) ? "Retrying..." : "Retry"}
+                          </Button>
+                          <Button 
+                            size="sm" 
+                            variant="outline"
+                            onClick={() => handleExport(r.invoice_id, r.vendor)}
+                            disabled={processingActions.has(`export-${r.invoice_id}`)}
+                          >
+                            {processingActions.has(`export-${r.invoice_id}`) ? "Exporting..." : "Export"}
+                          </Button>
+                          <Button 
+                            size="sm" 
+                            variant="ghost"
+                            onClick={() => handleViewHistory(r.invoice_id, r.vendor)}
+                          >
+                            View Vendor History
+                          </Button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
@@ -323,21 +513,28 @@ export default function VendorPaymentsPage() {
               <div>
                 <div className="mb-2 text-sm text-gray-300">Invoices waiting approval</div>
                 <ul className="space-y-2">
-                  {[
-                    { vendor: "Prime Logistics", invoice: "INV-10022", amount: "₹1,760,000" },
-                    { vendor: "Metro Services", invoice: "INV-10025", amount: "₹420,000" },
-                    { vendor: "OmniTrade", invoice: "INV-10027", amount: "₹280,000" },
-                  ].map((x, i) => (
-                    <li key={i} className="flex items-center justify-between rounded-md border border-white/10 p-3">
-                      <div className="text-sm text-white">
-                        {x.vendor} <span className="text-gray-400">· {x.invoice}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="text-sm text-white">{x.amount}</div>
-                        <Button size="sm">Approve</Button>
-                      </div>
-                    </li>
-                  ))}
+                  {vendorData?.invoices
+                    .filter(invoice => invoice.status === "Pending")
+                    .slice(0, 3)
+                    .map((x, i) => (
+                      <li key={i} className="flex items-center justify-between rounded-md border border-white/10 p-3">
+                        <div className="text-sm text-white">
+                          {x.vendor} <span className="text-gray-400">· {x.invoice_id}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="text-sm text-white">{x.amount}</div>
+                          <Button 
+                            size="sm"
+                            onClick={() => handleApprove(x.invoice_id, x.vendor)}
+                            disabled={processingActions.has(`approve-${x.invoice_id}`)}
+                          >
+                            {processingActions.has(`approve-${x.invoice_id}`) ? "Processing..." : "Approve"}
+                          </Button>
+                        </div>
+                      </li>
+                    )) || (
+                    <li className="text-sm text-gray-400 p-3">No pending approvals</li>
+                  )}
                 </ul>
               </div>
 
@@ -346,8 +543,8 @@ export default function VendorPaymentsPage() {
                 <div className="rounded-md border border-white/10 p-3">
                   <ResponsiveContainer width="100%" height={180}>
                     <PieChart>
-                      <Pie dataKey="value" data={TOP_VENDORS_PIE} innerRadius={40} outerRadius={70} paddingAngle={4}>
-                        {TOP_VENDORS_PIE.map((_, i) => (
+                      <Pie dataKey="value" data={vendorData?.charts.vendor_pie_data || []} innerRadius={40} outerRadius={70} paddingAngle={4}>
+                        {(vendorData?.charts.vendor_pie_data || []).map((_, i) => (
                           <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />
                         ))}
                       </Pie>

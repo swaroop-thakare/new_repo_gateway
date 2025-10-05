@@ -18,6 +18,7 @@ import {
   Wallet,
   Landmark,
   ShieldCheck,
+  Brain,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -37,6 +38,7 @@ const featureItems = [
   { href: "/book-demo/payroll", label: "Payroll", icon: Wallet },
   { href: "/book-demo/loan-disbursements", label: "Loan Disbursements", icon: Landmark },
   { href: "/book-demo/escrow", label: "Escrow Tracking", icon: ShieldCheck },
+  { href: "/book-demo/explainability", label: "Explainability", icon: Brain },
 ]
 
 export function DemoSidebar() {

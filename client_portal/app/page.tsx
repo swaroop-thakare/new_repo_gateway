@@ -13,10 +13,10 @@ export default function Home() {
   const [currentView, setCurrentView] = useState<View>("selection")
 
   return (
-    <ThemeProvider defaultTheme="dark">
+    <ThemeProvider>
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="container mx-auto px-4 pt-24 pb-8">
+        <main className="container mx-auto px-4 pt-24 pb-8 max-w-6xl">
           {currentView === "selection" && <MethodSelection onSelectMethod={setCurrentView} />}
           {currentView === "batch" && <BatchUploadView onBack={() => setCurrentView("selection")} />}
           {currentView === "streaming" && <StreamingView onBack={() => setCurrentView("selection")} />}
